@@ -1,0 +1,62 @@
+# Basic text generation examples
+
+# Simple generation with default settings
+uv run python -m cs336_basics.scripts.generate \
+  --model_path ./checkpoints/final_checkpoint.pt \
+  --vocab_path ./data/vocab.bin \
+  --merges_path ./data/merges.bin \
+  --prompt "The quick brown fox" \
+  --max_tokens 50 \
+  --vocab_size 32000 \
+  --context_length 512 \
+  --d_model 768 \
+  --num_layers 12 \
+  --num_heads 12 \
+  --d_ff 3072
+
+# Generation with creative sampling
+uv run python -m cs336_basics.scripts.generate \
+  --model_path ./checkpoints/final_checkpoint.pt \
+  --vocab_path ./data/vocab.bin \
+  --merges_path ./data/merges.bin \
+  --prompt "Once upon a time" \
+  --max_tokens 100 \
+  --temperature 0.8 \
+  --p 0.9 \
+  --vocab_size 32000 \
+  --context_length 512 \
+  --d_model 768 \
+  --num_layers 12 \
+  --num_heads 12 \
+  --d_ff 3072
+
+# Conservative generation (lower temperature)
+uv run python -m cs336_basics.scripts.generate \
+  --model_path ./checkpoints/final_checkpoint.pt \
+  --vocab_path ./data/vocab.bin \
+  --merges_path ./data/merges.bin \
+  --prompt "In the field of artificial intelligence" \
+  --max_tokens 75 \
+  --temperature 0.3 \
+  --p 0.7 \
+  --device cuda \
+  --vocab_size 32000 \
+  --context_length 512 \
+  --d_model 768 \
+  --num_layers 12 \
+  --num_heads 12 \
+  --d_ff 3072
+
+# Small model example (matching training config)
+uv run python -m cs336_basics.scripts.generate \
+  --model_path ./checkpoints/small_model.pt \
+  --vocab_path ./data/vocab.bin \
+  --merges_path ./data/merges.bin \
+  --prompt "The weather today is" \
+  --max_tokens 30 \
+  --vocab_size 10000 \
+  --context_length 256 \
+  --d_model 512 \
+  --num_layers 4 \
+  --num_heads 16 \
+  --d_ff 1344
