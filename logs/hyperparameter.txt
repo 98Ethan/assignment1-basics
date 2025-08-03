@@ -1,0 +1,2 @@
+warmup ≈ 3–5% of total steps.
+Quick rule: eval_interval ≈ max_iters / 10 and eval_iters ≈ 100-200

@@ -1,0 +1,886 @@
+(cs336-basics) xinyu@Xinyus-MacBook-Pro assignment1-basics % /Users/xinyu/Documents/Courses/cs336/assignment1-basics/.venv/bin/
+python /Users/xinyu/Documents/Courses/cs336/assignment1-basics/cs336_basics/tokenizer_word_freq.py
+2025-07-27 12:48:47,369 - INFO - Starting word-frequency BPE tokenizer training on ./data/owt_train.txt
+2025-07-27 12:48:47,369 - INFO - Target vocab size: 32000, Special tokens: ['<|endoftext|>']
+2025-07-27 12:48:47,369 - INFO - Building word frequencies...
+2025-07-27 12:48:47,369 - INFO - Finding chunk boundaries...
+2025-07-27 12:48:47,382 - INFO - Processing 100 chunks with 8 workers...
+2025-07-27 12:48:47,452 - INFO - Chunk 0: Reading file chunk 0:119207160
+2025-07-27 12:48:47,453 - INFO - Chunk 4: Reading file chunk 476820571:596034340
+2025-07-27 12:48:47,454 - INFO - Chunk 8: Reading file chunk 953645811:1072851961
+2025-07-27 12:48:47,462 - INFO - Chunk 12: Reading file chunk 1430471455:1549671467
+2025-07-27 12:48:47,464 - INFO - Chunk 16: Reading file chunk 1907284477:2026488446
+2025-07-27 12:48:47,468 - INFO - Chunk 20: Reading file chunk 2384146041:2503310798
+2025-07-27 12:48:47,477 - INFO - Chunk 24: Reading file chunk 2860925760:2980128270
+2025-07-27 12:48:47,481 - INFO - Chunk 28: Reading file chunk 3337744182:3456950085
+2025-07-27 12:49:05,559 - INFO - Chunk 0: Done in 18.10s - 369,129
+2025-07-27 12:49:05,691 - INFO - Chunk 8: Done in 18.24s - 374,903
+2025-07-27 12:49:05,695 - INFO - Chunk 24: Done in 18.22s - 372,156
+2025-07-27 12:49:05,702 - INFO - Chunk 16: Done in 18.24s - 363,235
+2025-07-27 12:49:05,795 - INFO - Chunk 20: Done in 18.33s - 366,750
+2025-07-27 12:49:05,827 - INFO - Chunk 12: Done in 18.36s - 380,588
+2025-07-27 12:49:05,996 - INFO - Chunk 4: Done in 18.54s - 368,352
+2025-07-27 12:49:06,053 - INFO - Chunk 28: Done in 18.57s - 374,286
+2025-07-27 12:49:06,305 - INFO - Chunk 1: Reading file chunk 119207160:238411870
+2025-07-27 12:49:06,448 - INFO - Chunk 9: Reading file chunk 1072851961:1192053438
+2025-07-27 12:49:06,497 - INFO - Chunk 17: Reading file chunk 2026488446:2145694087
+2025-07-27 12:49:06,512 - INFO - Chunk 25: Reading file chunk 2980128270:3099391530
+2025-07-27 12:49:06,720 - INFO - Chunk 21: Reading file chunk 2503310798:2622549053
+2025-07-27 12:49:07,366 - INFO - Chunk 13: Reading file chunk 1549671467:1668880848
+2025-07-27 12:49:08,088 - INFO - Chunk 5: Reading file chunk 596034340:715235893
+2025-07-27 12:49:08,504 - INFO - Chunk 29: Reading file chunk 3456950085:3576161360
+2025-07-27 12:49:26,748 - INFO - Chunk 21: Done in 20.02s - 359,952
+2025-07-27 12:49:27,278 - INFO - Chunk 1: Done in 20.97s - 364,995
+2025-07-27 12:49:27,587 - INFO - Chunk 13: Done in 20.22s - 373,031
+2025-07-27 12:49:27,728 - INFO - Chunk 22: Reading file chunk 2622549053:2741725283
+2025-07-27 12:49:27,828 - INFO - Chunk 9: Done in 21.38s - 361,725
+2025-07-27 12:49:27,933 - INFO - Chunk 5: Done in 19.84s - 374,222
+2025-07-27 12:49:28,242 - INFO - Chunk 25: Done in 21.73s - 369,290
+2025-07-27 12:49:28,257 - INFO - Chunk 2: Reading file chunk 238411870:357617846
+2025-07-27 12:49:28,658 - INFO - Chunk 17: Done in 22.16s - 367,603
+2025-07-27 12:49:28,733 - INFO - Chunk 14: Reading file chunk 1668880848:1788076959
+2025-07-27 12:49:28,759 - INFO - Chunk 29: Done in 20.25s - 362,312
+2025-07-27 12:49:29,124 - INFO - Chunk 10: Reading file chunk 1192053438:1311264730
+2025-07-27 12:49:29,236 - INFO - Chunk 6: Reading file chunk 715235893:834441439
+2025-07-27 12:49:30,233 - INFO - Chunk 26: Reading file chunk 3099391530:3218540066
+2025-07-27 12:49:30,745 - INFO - Chunk 18: Reading file chunk 2145694087:2264897622
+2025-07-27 12:49:31,097 - INFO - Chunk 30: Reading file chunk 3576161360:3695364125
+2025-07-27 12:49:47,565 - INFO - Chunk 22: Done in 19.84s - 369,345
+2025-07-27 12:49:47,959 - INFO - Chunk 2: Done in 19.70s - 366,355
+2025-07-27 12:49:48,279 - INFO - Chunk 14: Done in 19.54s - 360,214
+2025-07-27 12:49:48,433 - INFO - Chunk 23: Reading file chunk 2741725283:2860925760
+2025-07-27 12:49:49,399 - INFO - Chunk 3: Reading file chunk 357617846:476820571
+2025-07-27 12:49:49,518 - INFO - Chunk 6: Done in 20.27s - 371,365
+2025-07-27 12:49:50,270 - INFO - Chunk 15: Reading file chunk 1788076959:1907284477
+2025-07-27 12:49:51,381 - INFO - Chunk 26: Done in 21.15s - 361,843
+2025-07-27 12:49:51,469 - INFO - Chunk 10: Done in 22.34s - 367,438
+2025-07-27 12:49:51,522 - INFO - Chunk 7: Reading file chunk 834441439:953645811
+2025-07-27 12:49:52,236 - INFO - Chunk 18: Done in 21.49s - 365,397
+2025-07-27 12:49:52,629 - INFO - Chunk 30: Done in 21.53s - 366,210
+2025-07-27 12:49:52,657 - INFO - Chunk 27: Reading file chunk 3218540066:3337744182
+2025-07-27 12:49:52,762 - INFO - Chunk 11: Reading file chunk 1311264730:1430471455
+2025-07-27 12:49:53,924 - INFO - Chunk 19: Reading file chunk 2264897622:2384146041
+2025-07-27 12:49:54,519 - INFO - Chunk 31: Reading file chunk 3695364125:3814566745
+2025-07-27 12:50:10,870 - INFO - Chunk 23: Done in 22.43s - 363,672
+2025-07-27 12:50:11,478 - INFO - Chunk 7: Done in 19.95s - 368,457
+2025-07-27 12:50:11,739 - INFO - Chunk 3: Done in 22.34s - 369,716
+2025-07-27 12:50:12,269 - INFO - Chunk 15: Done in 22.00s - 373,086
+2025-07-27 12:50:12,466 - INFO - Chunk 11: Done in 19.70s - 361,385
+2025-07-27 12:50:12,749 - INFO - Chunk 32: Reading file chunk 3814566745:3933771132
+2025-07-27 12:50:13,098 - INFO - Chunk 27: Done in 20.44s - 362,085
+2025-07-27 12:50:13,223 - INFO - Chunk 36: Reading file chunk 4291387846:4410589776
+2025-07-27 12:50:13,640 - INFO - Chunk 40: Reading file chunk 4768216034:4887412703
+2025-07-27 12:50:13,799 - INFO - Chunk 31: Done in 19.28s - 369,868
+2025-07-27 12:50:13,833 - INFO - Chunk 19: Done in 19.91s - 370,327
+2025-07-27 12:50:14,034 - INFO - Chunk 44: Reading file chunk 5245035760:5364230129
+2025-07-27 12:50:14,352 - INFO - Chunk 48: Reading file chunk 5721847302:5841060405
+2025-07-27 12:50:14,762 - INFO - Chunk 52: Reading file chunk 6198667006:6317873701
+2025-07-27 12:50:15,047 - INFO - Chunk 56: Reading file chunk 6675491718:6794692211
+2025-07-27 12:50:15,405 - INFO - Chunk 60: Reading file chunk 7152306740:7271537347
+2025-07-27 12:50:29,050 - INFO - Chunk 32: Done in 16.30s - 374,306
+2025-07-27 12:50:29,732 - INFO - Chunk 33: Reading file chunk 3933771132:4052979304
+2025-07-27 12:50:29,903 - INFO - Chunk 36: Done in 16.68s - 366,173
+2025-07-27 12:50:30,763 - INFO - Chunk 40: Done in 17.12s - 367,300
+2025-07-27 12:50:30,919 - INFO - Chunk 44: Done in 16.88s - 363,291
+2025-07-27 12:50:31,031 - INFO - Chunk 37: Reading file chunk 4410589776:4529795307
+2025-07-27 12:50:31,963 - INFO - Chunk 48: Done in 17.61s - 365,885
+2025-07-27 12:50:32,044 - INFO - Chunk 41: Reading file chunk 4887412703:5006618788
+2025-07-27 12:50:32,365 - INFO - Chunk 45: Reading file chunk 5364230129:5483439425
+2025-07-27 12:50:32,521 - INFO - Chunk 52: Done in 17.76s - 362,249
+2025-07-27 12:50:32,811 - INFO - Chunk 56: Done in 17.75s - 365,242
+2025-07-27 12:50:33,580 - INFO - Chunk 49: Reading file chunk 5841060405:5960269363
+2025-07-27 12:50:34,133 - INFO - Chunk 60: Done in 18.73s - 363,479
+2025-07-27 12:50:34,199 - INFO - Chunk 53: Reading file chunk 6317873701:6437088326
+2025-07-27 12:50:34,384 - INFO - Chunk 57: Reading file chunk 6794692211:6913915031
+2025-07-27 12:50:35,669 - INFO - Chunk 61: Reading file chunk 7271537347:7390717963
+2025-07-27 12:50:49,663 - INFO - Chunk 33: Done in 19.93s - 363,158
+2025-07-27 12:50:50,671 - INFO - Chunk 34: Reading file chunk 4052979304:4172185679
+2025-07-27 12:50:52,186 - INFO - Chunk 37: Done in 21.15s - 372,255
+2025-07-27 12:50:52,367 - INFO - Chunk 45: Done in 20.00s - 372,417
+2025-07-27 12:50:52,582 - INFO - Chunk 41: Done in 20.54s - 388,374
+2025-07-27 12:50:53,050 - INFO - Chunk 38: Reading file chunk 4529795307:4649004382
+2025-07-27 12:50:53,363 - INFO - Chunk 49: Done in 19.78s - 365,408
+2025-07-27 12:50:53,456 - INFO - Chunk 46: Reading file chunk 5483439425:5602660196
+2025-07-27 12:50:53,966 - INFO - Chunk 42: Reading file chunk 5006618788:5125820822
+2025-07-27 12:50:55,467 - INFO - Chunk 50: Reading file chunk 5960269363:6079460919
+2025-07-27 12:50:55,770 - INFO - Chunk 53: Done in 21.56s - 372,006
+2025-07-27 12:50:55,973 - INFO - Chunk 57: Done in 21.59s - 376,571
+2025-07-27 12:50:56,585 - INFO - Chunk 54: Reading file chunk 6437088326:6556281869
+2025-07-27 12:50:56,901 - INFO - Chunk 61: Done in 21.23s - 368,132
+2025-07-27 12:50:57,015 - INFO - Chunk 58: Reading file chunk 6913915031:7033102760
+2025-07-27 12:50:58,057 - INFO - Chunk 62: Reading file chunk 7390717963:7509927122
+2025-07-27 12:51:11,305 - INFO - Chunk 34: Done in 20.63s - 364,436
+2025-07-27 12:51:12,057 - INFO - Chunk 35: Reading file chunk 4172185679:4291387846
+2025-07-27 12:51:13,296 - INFO - Chunk 38: Done in 20.24s - 365,284
+2025-07-27 12:51:13,395 - INFO - Chunk 46: Done in 19.94s - 369,125
+2025-07-27 12:51:14,189 - INFO - Chunk 42: Done in 20.22s - 365,873
+2025-07-27 12:51:14,228 - INFO - Chunk 39: Reading file chunk 4649004382:4768216034
+2025-07-27 12:51:14,592 - INFO - Chunk 47: Reading file chunk 5602660196:5721847302
+2025-07-27 12:51:16,081 - INFO - Chunk 43: Reading file chunk 5125820822:5245035760
+2025-07-27 12:51:16,519 - INFO - Chunk 50: Done in 21.05s - 360,378
+2025-07-27 12:51:17,195 - INFO - Chunk 54: Done in 20.61s - 375,186
+2025-07-27 12:51:17,659 - INFO - Chunk 51: Reading file chunk 6079460919:6198667006
+2025-07-27 12:51:17,711 - INFO - Chunk 58: Done in 20.69s - 365,807
+2025-07-27 12:51:18,339 - INFO - Chunk 55: Reading file chunk 6556281869:6675491718
+2025-07-27 12:51:19,201 - INFO - Chunk 59: Reading file chunk 7033102760:7152306740
+2025-07-27 12:51:19,451 - INFO - Chunk 62: Done in 21.39s - 363,393
+2025-07-27 12:51:20,441 - INFO - Chunk 63: Reading file chunk 7509927122:7629130206
+2025-07-27 12:51:32,393 - INFO - Chunk 35: Done in 20.32s - 369,253
+2025-07-27 12:51:34,037 - INFO - Chunk 64: Reading file chunk 7629130206:7748336753
+2025-07-27 12:51:34,971 - INFO - Chunk 47: Done in 20.38s - 362,022
+2025-07-27 12:51:35,279 - INFO - Chunk 39: Done in 21.05s - 368,358
+2025-07-27 12:51:36,099 - INFO - Chunk 43: Done in 20.01s - 367,662
+2025-07-27 12:51:37,474 - INFO - Chunk 51: Done in 19.81s - 387,211
+2025-07-27 12:51:37,709 - INFO - Chunk 68: Reading file chunk 8105953197:8225152842
+2025-07-27 12:51:37,978 - INFO - Chunk 72: Reading file chunk 8582768924:8701975165
+2025-07-27 12:51:38,115 - INFO - Chunk 55: Done in 19.78s - 369,360
+2025-07-27 12:51:38,277 - INFO - Chunk 76: Reading file chunk 9059593779:9178794076
+2025-07-27 12:51:38,836 - INFO - Chunk 80: Reading file chunk 9536412533:9655614241
+2025-07-27 12:51:39,184 - INFO - Chunk 59: Done in 19.98s - 376,034
+2025-07-27 12:51:39,352 - INFO - Chunk 84: Reading file chunk 10013237158:10132435522
+2025-07-27 12:51:39,596 - INFO - Chunk 63: Done in 19.16s - 365,898
+2025-07-27 12:51:40,199 - INFO - Chunk 88: Reading file chunk 10490049796:10609271311
+2025-07-27 12:51:40,577 - INFO - Chunk 92: Reading file chunk 10966870554:11086128592
+2025-07-27 12:51:50,370 - INFO - Chunk 64: Done in 16.33s - 361,416
+2025-07-27 12:51:50,654 - INFO - Chunk 65: Reading file chunk 7748336753:7867543798
+2025-07-27 12:51:55,110 - INFO - Chunk 72: Done in 17.13s - 366,054
+2025-07-27 12:51:55,199 - INFO - Chunk 68: Done in 17.49s - 378,819
+2025-07-27 12:51:55,692 - INFO - Chunk 76: Done in 17.41s - 362,023
+2025-07-27 12:51:56,076 - INFO - Chunk 73: Reading file chunk 8701975165:8821187741
+2025-07-27 12:51:56,448 - INFO - Chunk 69: Reading file chunk 8225152842:8344361962
+2025-07-27 12:51:57,056 - INFO - Chunk 80: Done in 18.22s - 376,631
+2025-07-27 12:51:57,522 - INFO - Chunk 84: Done in 18.17s - 366,061
+2025-07-27 12:51:57,644 - INFO - Chunk 77: Reading file chunk 9178794076:9298000728
+2025-07-27 12:51:58,962 - INFO - Chunk 81: Reading file chunk 9655614241:9774830942
+2025-07-27 12:51:59,519 - INFO - Chunk 85: Reading file chunk 10132435522:10251641893
+2025-07-27 12:51:59,795 - INFO - Chunk 88: Done in 19.59s - 362,546
+2025-07-27 12:52:00,440 - INFO - Chunk 92: Done in 19.86s - 370,386
+2025-07-27 12:52:01,592 - INFO - Chunk 89: Reading file chunk 10609271311:10728477501
+2025-07-27 12:52:01,789 - INFO - Chunk 93: Reading file chunk 11086128592:11205285643
+2025-07-27 12:52:11,879 - INFO - Chunk 65: Done in 21.21s - 363,842
+2025-07-27 12:52:12,289 - INFO - Chunk 66: Reading file chunk 7867543798:7986742688
+2025-07-27 12:52:18,898 - INFO - Chunk 85: Done in 19.38s - 367,270
+2025-07-27 12:52:19,090 - INFO - Chunk 81: Done in 20.13s - 361,233
+2025-07-27 12:52:19,270 - INFO - Chunk 69: Done in 22.82s - 367,935
+2025-07-27 12:52:19,406 - INFO - Chunk 77: Done in 21.76s - 364,749
+2025-07-27 12:52:19,492 - INFO - Chunk 73: Done in 23.41s - 362,399
+2025-07-27 12:52:19,739 - INFO - Chunk 86: Reading file chunk 10251641893:10370847072
+2025-07-27 12:52:19,777 - INFO - Chunk 82: Reading file chunk 9774830942:9894033907
+2025-07-27 12:52:20,784 - INFO - Chunk 70: Reading file chunk 8344361962:8463602543
+2025-07-27 12:52:21,234 - INFO - Chunk 78: Reading file chunk 9298000728:9417217122
+2025-07-27 12:52:21,619 - INFO - Chunk 74: Reading file chunk 8821187741:8940385101
+2025-07-27 12:52:22,443 - INFO - Chunk 93: Done in 20.65s - 369,232
+2025-07-27 12:52:23,053 - INFO - Chunk 89: Done in 21.46s - 367,460
+2025-07-27 12:52:23,834 - INFO - Chunk 94: Reading file chunk 11205285643:11324489139
+2025-07-27 12:52:24,226 - INFO - Chunk 90: Reading file chunk 10728477501:10847690877
+2025-07-27 12:52:33,362 - INFO - Chunk 66: Done in 21.07s - 369,090
+2025-07-27 12:52:34,033 - INFO - Chunk 67: Reading file chunk 7986742688:8105953197
+2025-07-27 12:52:42,481 - INFO - Chunk 82: Done in 22.69s - 358,544
+2025-07-27 12:52:42,490 - INFO - Chunk 86: Done in 22.75s - 368,111
+2025-07-27 12:52:44,105 - INFO - Chunk 83: Reading file chunk 9894033907:10013237158
+2025-07-27 12:52:44,113 - INFO - Chunk 87: Reading file chunk 10370847072:10490049796
+2025-07-27 12:52:44,729 - INFO - Chunk 78: Done in 23.49s - 367,321
+2025-07-27 12:52:44,921 - INFO - Chunk 94: Done in 21.08s - 371,264
+2025-07-27 12:52:45,110 - INFO - Chunk 74: Done in 23.49s - 363,083
+2025-07-27 12:52:45,717 - INFO - Chunk 70: Done in 24.93s - 363,508
+2025-07-27 12:52:46,185 - INFO - Chunk 79: Reading file chunk 9417217122:9536412533
+2025-07-27 12:52:46,562 - INFO - Chunk 95: Reading file chunk 11324489139:11443693600
+2025-07-27 12:52:46,894 - INFO - Chunk 75: Reading file chunk 8940385101:9059593779
+2025-07-27 12:52:47,041 - INFO - Chunk 90: Done in 22.81s - 362,028
+2025-07-27 12:52:47,927 - INFO - Chunk 71: Reading file chunk 8463602543:8582768924
+2025-07-27 12:52:49,056 - INFO - Chunk 91: Reading file chunk 10847690877:10966870554
+2025-07-27 12:52:56,478 - INFO - Chunk 67: Done in 22.44s - 372,192
+2025-07-27 12:52:58,139 - INFO - Chunk 96: Reading file chunk 11443693600:11562896975
+2025-07-27 12:53:06,725 - INFO - Chunk 87: Done in 22.61s - 371,923
+2025-07-27 12:53:06,920 - INFO - Chunk 83: Done in 22.81s - 366,799
+2025-07-27 12:53:07,946 - INFO - Chunk 79: Done in 21.76s - 367,979
+2025-07-27 12:53:08,175 - INFO - Chunk 95: Done in 21.61s - 364,248
+2025-07-27 12:53:08,198 - INFO - Chunk 71: Done in 20.26s - 375,274
+2025-07-27 12:53:08,662 - INFO - Chunk 75: Done in 21.77s - 357,460
+2025-07-27 12:53:09,305 - INFO - Chunk 91: Done in 20.25s - 363,176
+2025-07-27 12:53:13,638 - INFO - Chunk 96: Done in 15.50s - 358,148
+2025-07-27 12:53:13,853 - INFO - Chunk 97: Reading file chunk 11562896975:11682102730
+2025-07-27 12:53:24,672 - INFO - Chunk 97: Done in 10.82s - 374,871
+2025-07-27 12:53:24,835 - INFO - Chunk 98: Reading file chunk 11682102730:11801320321
+2025-07-27 12:53:35,567 - INFO - Chunk 98: Done in 10.73s - 358,193
+2025-07-27 12:53:35,733 - INFO - Chunk 99: Reading file chunk 11801320321:11920511059
+2025-07-27 12:53:46,470 - INFO - Chunk 99: Done in 10.74s - 363,908
+2025-07-27 12:53:47,204 - INFO - All chunks processed in 299.82s
+2025-07-27 12:53:47,206 - INFO - Combining frequency counters...
+2025-07-27 12:54:06,323 - INFO - Combined all counters in 19.12s
+2025-07-27 12:54:06,323 - INFO - Built word frequencies in 318.95s
+2025-07-27 12:54:06,345 - INFO - Total words: 2,471,753,092
+2025-07-27 12:54:06,345 - INFO - Unique words: 6,601,892
+2025-07-27 12:54:06,606 - INFO - Starting BPE training with word frequency approach...
+2025-07-27 12:54:06,606 - INFO - Initial vocab size: 257 (256 bytes + 1 special tokens)
+2025-07-27 12:54:06,606 - INFO - Initializing word splits and pair frequencies...
+2025-07-27 12:54:40,922 - INFO - Initialized splits and pairs in 34.32s
+2025-07-27 12:54:40,922 - INFO - Found 19592 unique pairs
+2025-07-27 12:54:40,922 - INFO - Performing 31743 BPE merges...
+2025-07-27 12:54:41,113 - INFO - Merge 1/31743: ' t' (freq=258593349) - 0.2s elapsed, ETA 6069.8s
+2025-07-27 12:54:41,362 - INFO - Merge 2/31743: ' a' (freq=194902145) - 0.4s elapsed, ETA 6984.8s
+2025-07-27 12:54:44,078 - INFO - Merge 3/31743: 'he' (freq=186984107) - 3.2s elapsed, ETA 33391.6s
+2025-07-27 12:54:45,756 - INFO - Merge 4/31743: 'in' (freq=173738139) - 4.8s elapsed, ETA 38359.9s
+2025-07-27 12:54:47,092 - INFO - Merge 5/31743: 're' (freq=126258705) - 6.2s elapsed, ETA 39163.1s
+2025-07-27 12:54:47,104 - INFO - Merge 6/31743: ' the' (freq=120462115) - 6.2s elapsed, ETA 32700.1s
+2025-07-27 12:54:48,534 - INFO - Merge 7/31743: 'on' (freq=117659993) - 7.6s elapsed, ETA 34511.5s
+2025-07-27 12:54:50,521 - INFO - Merge 8/31743: 'er' (freq=108743274) - 9.6s elapsed, ETA 38080.6s
+2025-07-27 12:54:50,850 - INFO - Merge 9/31743: ' s' (freq=105777880) - 9.9s elapsed, ETA 35008.3s
+2025-07-27 12:54:50,980 - INFO - Merge 10/31743: ' w' (freq=95630090) - 10.1s elapsed, ETA 31916.7s
+2025-07-27 12:55:19,236 - INFO - Merge 50/31743: 've' (freq=29436969) - 38.3s elapsed, ETA 24285.6s
+2025-07-27 12:55:41,603 - INFO - Merge 100/31743: 'her' (freq=14592744) - 60.7s elapsed, ETA 19201.5s
+2025-07-27 12:55:59,068 - INFO - Merge 150/31743: ' 2' (freq=9793099) - 78.1s elapsed, ETA 16459.1s
+2025-07-27 12:56:09,779 - INFO - Merge 200/31743: 'end' (freq=7219236) - 88.9s elapsed, ETA 14014.2s
+2025-07-27 12:56:17,989 - INFO - Merge 250/31743: 'ft' (freq=6027207) - 97.1s elapsed, ETA 12227.8s
+2025-07-27 12:56:27,500 - INFO - Merge 300/31743: 'ery' (freq=4922357) - 106.6s elapsed, ETA 11170.5s
+2025-07-27 12:56:34,718 - INFO - Merge 350/31743: 'ces' (freq=4128737) - 113.8s elapsed, ETA 10206.9s
+2025-07-27 12:56:41,644 - INFO - Merge 400/31743: 'ence' (freq=3460084) - 120.7s elapsed, ETA 9459.5s
+2025-07-27 12:56:47,280 - INFO - Merge 450/31743: ' In' (freq=3043313) - 126.4s elapsed, ETA 8787.0s
+2025-07-27 12:56:53,408 - INFO - Merge 500/31743: 'ci' (freq=2714302) - 132.5s elapsed, ETA 8278.5s
+2025-07-27 12:56:58,032 - INFO - Merge 550/31743: 'lat' (freq=2427923) - 137.1s elapsed, ETA 7776.1s
+2025-07-27 12:57:03,440 - INFO - Merge 600/31743: 'reg' (freq=2158528) - 142.5s elapsed, ETA 7397.4s
+2025-07-27 12:57:07,249 - INFO - Merge 650/31743: 'ma' (freq=2005371) - 146.3s elapsed, ETA 6999.6s
+2025-07-27 12:57:11,187 - INFO - Merge 700/31743: 'app' (freq=1835213) - 150.3s elapsed, ETA 6663.9s
+2025-07-27 12:57:14,541 - INFO - Merge 750/31743: ' las' (freq=1701703) - 153.6s elapsed, ETA 6348.1s
+2025-07-27 12:57:17,818 - INFO - Merge 800/31743: ' lon' (freq=1582231) - 156.9s elapsed, ETA 6068.5s
+2025-07-27 12:57:21,907 - INFO - Merge 850/31743: ' New' (freq=1480380) - 161.0s elapsed, ETA 5851.0s
+2025-07-27 12:57:25,546 - INFO - Merge 900/31743: 'nal' (freq=1378207) - 164.6s elapsed, ETA 5641.7s
+2025-07-27 12:57:28,212 - INFO - Merge 950/31743: 'tial' (freq=1300506) - 167.3s elapsed, ETA 5422.5s
+2025-07-27 12:57:31,848 - INFO - Merge 1000/31743: 'ants' (freq=1196139) - 170.9s elapsed, ETA 5254.8s
+2025-07-27 12:57:34,902 - INFO - Merge 1050/31743: 'icul' (freq=1127461) - 174.0s elapsed, ETA 5085.7s
+2025-07-27 12:57:37,898 - INFO - Merge 1100/31743: '99' (freq=1060792) - 177.0s elapsed, ETA 4930.1s
+2025-07-27 12:57:40,534 - INFO - Merge 1150/31743: 'imes' (freq=997648) - 179.6s elapsed, ETA 4778.1s
+2025-07-27 12:57:42,568 - INFO - Merge 1200/31743: 'lim' (freq=959457) - 181.6s elapsed, ETA 4623.3s
+2025-07-27 12:57:44,790 - INFO - Merge 1250/31743: 'ensi' (freq=919576) - 183.9s elapsed, ETA 4485.3s
+2025-07-27 12:57:47,432 - INFO - Merge 1300/31743: ' les' (freq=872106) - 186.5s elapsed, ETA 4367.6s
+2025-07-27 12:57:50,102 - INFO - Merge 1350/31743: 'uro' (freq=825970) - 189.2s elapsed, ETA 4259.1s
+2025-07-27 12:57:52,355 - INFO - Merge 1400/31743: 'vis' (freq=789569) - 191.4s elapsed, ETA 4149.0s
+2025-07-27 12:57:58,090 - INFO - Merge 1450/31743: 'opul' (freq=752201) - 197.2s elapsed, ETA 4119.2s
+2025-07-27 12:57:59,910 - INFO - Merge 1500/31743: 'arri' (freq=724934) - 199.0s elapsed, ETA 4012.0s
+2025-07-27 12:58:01,766 - INFO - Merge 1550/31743: ' 12' (freq=699336) - 200.8s elapsed, ETA 3912.3s
+2025-07-27 12:58:03,643 - INFO - Merge 1600/31743: 'ints' (freq=670478) - 202.7s elapsed, ETA 3819.1s
+2025-07-27 12:58:05,043 - INFO - Merge 1650/31743: 'ison' (freq=648361) - 204.1s elapsed, ETA 3722.8s
+2025-07-27 12:58:07,108 - INFO - Merge 1700/31743: 'but' (freq=622274) - 206.2s elapsed, ETA 3643.8s
+2025-07-27 12:58:09,446 - INFO - Merge 1750/31743: 'arr' (freq=595038) - 208.5s elapsed, ETA 3573.9s
+2025-07-27 12:58:10,814 - INFO - Merge 1800/31743: 'rip' (freq=578414) - 209.9s elapsed, ETA 3491.6s
+2025-07-27 12:58:12,511 - INFO - Merge 1850/31743: 'ald' (freq=557886) - 211.6s elapsed, ETA 3418.9s
+2025-07-27 12:58:13,991 - INFO - Merge 1900/31743: 'udy' (freq=537279) - 213.1s elapsed, ETA 3346.6s
+2025-07-27 12:58:16,216 - INFO - Merge 1950/31743: 'otin' (freq=520403) - 215.3s elapsed, ETA 3289.4s
+2025-07-27 12:58:17,317 - INFO - Merge 2000/31743: 'mes' (freq=504834) - 216.4s elapsed, ETA 3218.1s
+2025-07-27 12:58:19,064 - INFO - Merge 2050/31743: ' cov' (freq=486950) - 218.1s elapsed, ETA 3159.7s
+2025-07-27 12:58:20,603 - INFO - Merge 2100/31743: ' six' (freq=469684) - 219.7s elapsed, ETA 3101.0s
+2025-07-27 12:58:22,192 - INFO - Merge 2150/31743: 'amed' (freq=454851) - 221.3s elapsed, ETA 3045.6s
+2025-07-27 12:58:23,410 - INFO - Merge 2200/31743: 'ocum' (freq=442046) - 222.5s elapsed, ETA 2987.7s
+2025-07-27 12:58:25,045 - INFO - Merge 2250/31743: 'icip' (freq=426710) - 224.1s elapsed, ETA 2937.8s
+2025-07-27 12:58:26,845 - INFO - Merge 2300/31743: 'icit' (freq=411819) - 225.9s elapsed, ETA 2892.1s
+2025-07-27 12:58:28,230 - INFO - Merge 2350/31743: ' sel' (freq=399252) - 227.3s elapsed, ETA 2843.1s
+2025-07-27 12:58:29,482 - INFO - Merge 2400/31743: 'oups' (freq=387631) - 228.6s elapsed, ETA 2794.4s
+2025-07-27 12:58:30,866 - INFO - Merge 2450/31743: 'uen' (freq=378321) - 229.9s elapsed, ETA 2749.3s
+2025-07-27 12:58:32,090 - INFO - Merge 2500/31743: 'erh' (freq=366981) - 231.2s elapsed, ETA 2704.0s
+2025-07-27 12:58:33,753 - INFO - Merge 2550/31743: 'eak' (freq=354087) - 232.8s elapsed, ETA 2665.5s
+2025-07-27 12:58:35,246 - INFO - Merge 2600/31743: 'uly' (freq=344251) - 234.3s elapsed, ETA 2626.5s
+2025-07-27 12:58:36,504 - INFO - Merge 2650/31743: 'inly' (freq=332977) - 235.6s elapsed, ETA 2586.3s
+2025-07-27 12:58:37,949 - INFO - Merge 2700/31743: ' Lin' (freq=323136) - 237.0s elapsed, ETA 2549.6s
+2025-07-27 12:58:39,114 - INFO - Merge 2750/31743: 'enj' (freq=315159) - 238.2s elapsed, ETA 2511.2s
+2025-07-27 12:58:40,522 - INFO - Merge 2800/31743: ' Tur' (freq=304748) - 239.6s elapsed, ETA 2476.7s
+2025-07-27 12:58:42,608 - INFO - Merge 2850/31743: 'oic' (freq=295238) - 241.7s elapsed, ETA 2450.2s
+2025-07-27 12:58:43,790 - INFO - Merge 2900/31743: ' squ' (freq=287518) - 242.9s elapsed, ETA 2415.5s
+2025-07-27 12:58:44,960 - INFO - Merge 2950/31743: ' Pen' (freq=279476) - 244.0s elapsed, ETA 2381.9s
+2025-07-27 12:58:46,178 - INFO - Merge 3000/31743: 'leav' (freq=271602) - 245.3s elapsed, ETA 2349.8s
+2025-07-27 12:58:47,519 - INFO - Merge 3050/31743: 'hael' (freq=263064) - 246.6s elapsed, ETA 2319.9s
+2025-07-27 12:58:48,817 - INFO - Merge 3100/31743: ' bud' (freq=256403) - 247.9s elapsed, ETA 2290.5s
+2025-07-27 12:58:49,996 - INFO - Merge 3150/31743: 'spor' (freq=250203) - 249.1s elapsed, ETA 2260.9s
+2025-07-27 12:58:51,479 - INFO - Merge 3200/31743: 'ghou' (freq=243563) - 250.6s elapsed, ETA 2234.9s
+2025-07-27 12:58:52,442 - INFO - Merge 3250/31743: 'No' (freq=238451) - 251.5s elapsed, ETA 2205.1s
+2025-07-27 12:58:53,533 - INFO - Merge 3300/31743: 'inor' (freq=233040) - 252.6s elapsed, ETA 2177.3s
+2025-07-27 12:58:54,640 - INFO - Merge 3350/31743: 'stly' (freq=226576) - 253.7s elapsed, ETA 2150.4s
+2025-07-27 12:58:55,603 - INFO - Merge 3400/31743: 'ribe' (freq=221011) - 254.7s elapsed, ETA 2123.1s
+2025-07-27 12:58:56,698 - INFO - Merge 3450/31743: 'esi' (freq=215929) - 255.8s elapsed, ETA 2097.6s
+2025-07-27 12:58:58,229 - INFO - Merge 3500/31743: 'Man' (freq=208777) - 257.3s elapsed, ETA 2076.3s
+2025-07-27 12:58:59,262 - INFO - Merge 3550/31743: ' ali' (freq=203498) - 258.3s elapsed, ETA 2051.7s
+2025-07-27 12:59:00,187 - INFO - Merge 3600/31743: ' 60' (freq=199900) - 259.3s elapsed, ETA 2026.8s
+2025-07-27 12:59:01,293 - INFO - Merge 3650/31743: ' yes' (freq=193923) - 260.4s elapsed, ETA 2004.0s
+2025-07-27 12:59:02,523 - INFO - Merge 3700/31743: 'egat' (freq=188817) - 261.6s elapsed, ETA 1982.7s
+2025-07-27 12:59:03,855 - INFO - Merge 3750/31743: 'rowd' (freq=183120) - 262.9s elapsed, ETA 1962.7s
+2025-07-27 12:59:05,151 - INFO - Merge 3800/31743: 'awy' (freq=178785) - 264.2s elapsed, ETA 1943.0s
+2025-07-27 12:59:06,203 - INFO - Merge 3850/31743: 'orro' (freq=174513) - 265.3s elapsed, ETA 1921.9s
+2025-07-27 12:59:07,369 - INFO - Merge 3900/31743: 'ING' (freq=170505) - 266.4s elapsed, ETA 1902.2s
+2025-07-27 12:59:08,516 - INFO - Merge 3950/31743: 'gely' (freq=166257) - 267.6s elapsed, ETA 1882.8s
+2025-07-27 12:59:09,868 - INFO - Merge 4000/31743: 'lif' (freq=162099) - 268.9s elapsed, ETA 1865.3s
+2025-07-27 12:59:11,003 - INFO - Merge 4050/31743: ' etc' (freq=158574) - 270.1s elapsed, ETA 1846.8s
+2025-07-27 12:59:12,708 - INFO - Merge 4100/31743: '005' (freq=155459) - 271.8s elapsed, ETA 1832.4s
+2025-07-27 12:59:14,106 - INFO - Merge 4150/31743: 'fou' (freq=151194) - 273.2s elapsed, ETA 1816.4s
+2025-07-27 12:59:15,507 - INFO - Merge 4200/31743: 'asts' (freq=147357) - 274.6s elapsed, ETA 1800.7s
+2025-07-27 12:59:16,592 - INFO - Merge 4250/31743: ' Wil' (freq=144118) - 275.7s elapsed, ETA 1783.3s
+2025-07-27 12:59:18,027 - INFO - Merge 4300/31743: 'buse' (freq=139778) - 277.1s elapsed, ETA 1768.5s
+2025-07-27 12:59:19,050 - INFO - Merge 4350/31743: ' Hon' (freq=136829) - 278.1s elapsed, ETA 1751.4s
+2025-07-27 12:59:20,911 - INFO - Merge 4400/31743: ' Pak' (freq=132802) - 280.0s elapsed, ETA 1739.9s
+2025-07-27 12:59:22,326 - INFO - Merge 4450/31743: ' GOP' (freq=130010) - 281.4s elapsed, ETA 1725.9s
+2025-07-27 12:59:23,555 - INFO - Merge 4500/31743: '48' (freq=127206) - 282.6s elapsed, ETA 1711.1s
+2025-07-27 12:59:24,711 - INFO - Merge 4550/31743: ' pla' (freq=124779) - 283.8s elapsed, ETA 1696.1s
+2025-07-27 12:59:25,687 - INFO - Merge 4600/31743: 'Br' (freq=122620) - 284.8s elapsed, ETA 1680.3s
+2025-07-27 12:59:26,748 - INFO - Merge 4650/31743: 'intr' (freq=119613) - 285.8s elapsed, ETA 1665.4s
+2025-07-27 12:59:27,817 - INFO - Merge 4700/31743: 'anen' (freq=117078) - 286.9s elapsed, ETA 1650.7s
+2025-07-27 12:59:29,208 - INFO - Merge 4750/31743: 'Co' (freq=114221) - 288.3s elapsed, ETA 1638.3s
+2025-07-27 12:59:30,397 - INFO - Merge 4800/31743: ' NA' (freq=111533) - 289.5s elapsed, ETA 1624.9s
+2025-07-27 12:59:31,358 - INFO - Merge 4850/31743: 'Stat' (freq=109315) - 290.4s elapsed, ETA 1610.5s
+2025-07-27 12:59:32,390 - INFO - Merge 4900/31743: 'Can' (freq=106950) - 291.5s elapsed, ETA 1596.7s
+2025-07-27 12:59:33,198 - INFO - Merge 4950/31743: ' Lit' (freq=105105) - 292.3s elapsed, ETA 1582.0s
+2025-07-27 12:59:34,513 - INFO - Merge 5000/31743: ' Jav' (freq=102845) - 293.6s elapsed, ETA 1570.3s
+2025-07-27 12:59:35,612 - INFO - Merge 5050/31743: ' Lar' (freq=100824) - 294.7s elapsed, ETA 1557.7s
+2025-07-27 12:59:36,510 - INFO - Merge 5100/31743: 'lau' (freq=98941) - 295.6s elapsed, ETA 1544.2s
+2025-07-27 12:59:37,336 - INFO - Merge 5150/31743: 'pil' (freq=97222) - 296.4s elapsed, ETA 1530.6s
+2025-07-27 12:59:38,118 - INFO - Merge 5200/31743: 'gled' (freq=95717) - 297.2s elapsed, ETA 1517.0s
+2025-07-27 12:59:39,072 - INFO - Merge 5250/31743: 'sun' (freq=93699) - 298.1s elapsed, ETA 1504.5s
+2025-07-27 12:59:40,140 - INFO - Merge 5300/31743: '09' (freq=91686) - 299.2s elapsed, ETA 1492.9s
+2025-07-27 12:59:40,964 - INFO - Merge 5350/31743: ' atm' (freq=90113) - 300.0s elapsed, ETA 1480.2s
+2025-07-27 12:59:41,917 - INFO - Merge 5400/31743: 'tb' (freq=88599) - 301.0s elapsed, ETA 1468.4s
+2025-07-27 12:59:43,171 - INFO - Merge 5450/31743: 'nsi' (freq=87235) - 302.2s elapsed, ETA 1458.2s
+2025-07-27 12:59:44,061 - INFO - Merge 5500/31743: 'nton' (freq=85421) - 303.1s elapsed, ETA 1446.4s
+2025-07-27 12:59:45,067 - INFO - Merge 5550/31743: 'inhe' (freq=83715) - 304.1s elapsed, ETA 1435.4s
+2025-07-27 12:59:46,359 - INFO - Merge 5600/31743: ' Wik' (freq=81843) - 305.4s elapsed, ETA 1425.9s
+2025-07-27 12:59:46,874 - INFO - Merge 5650/31743: 'tph' (freq=80734) - 306.0s elapsed, ETA 1413.0s
+2025-07-27 12:59:47,894 - INFO - Merge 5700/31743: 'Ma' (freq=79613) - 307.0s elapsed, ETA 1402.5s
+2025-07-27 12:59:48,453 - INFO - Merge 5750/31743: 'moot' (freq=78484) - 307.5s elapsed, ETA 1390.2s
+2025-07-27 12:59:49,353 - INFO - Merge 5800/31743: 'reau' (freq=76896) - 308.4s elapsed, ETA 1379.6s
+2025-07-27 12:59:50,361 - INFO - Merge 5850/31743: 'SL' (freq=75226) - 309.4s elapsed, ETA 1369.6s
+2025-07-27 12:59:51,142 - INFO - Merge 5900/31743: 'ylv' (freq=73847) - 310.2s elapsed, ETA 1358.8s
+2025-07-27 12:59:51,957 - INFO - Merge 5950/31743: ' ble' (freq=72445) - 311.0s elapsed, ETA 1348.3s
+2025-07-27 12:59:52,802 - INFO - Merge 6000/31743: 'elib' (freq=71348) - 311.9s elapsed, ETA 1338.1s
+2025-07-27 12:59:53,744 - INFO - Merge 6050/31743: 'dh' (freq=70321) - 312.8s elapsed, ETA 1328.5s
+2025-07-27 12:59:54,802 - INFO - Merge 6100/31743: 'ruis' (freq=68942) - 313.9s elapsed, ETA 1319.5s
+2025-07-27 12:59:55,740 - INFO - Merge 6150/31743: ' clu' (freq=67878) - 314.8s elapsed, ETA 1310.1s
+2025-07-27 12:59:56,648 - INFO - Merge 6200/31743: ' LGB' (freq=66672) - 315.7s elapsed, ETA 1300.7s
+2025-07-27 12:59:57,612 - INFO - Merge 6250/31743: 'evas' (freq=65445) - 316.7s elapsed, ETA 1291.7s
+2025-07-27 12:59:58,565 - INFO - Merge 6300/31743: ' 55' (freq=64278) - 317.6s elapsed, ETA 1282.8s
+2025-07-27 12:59:59,442 - INFO - Merge 6350/31743: 'opti' (freq=63250) - 318.5s elapsed, ETA 1273.7s
+2025-07-27 13:00:00,312 - INFO - Merge 6400/31743: 'hoos' (freq=62217) - 319.4s elapsed, ETA 1264.7s
+2025-07-27 13:00:01,001 - INFO - Merge 6450/31743: ' fen' (freq=61254) - 320.1s elapsed, ETA 1255.2s
+2025-07-27 13:00:01,772 - INFO - Merge 6500/31743: 'Min' (freq=60294) - 320.9s elapsed, ETA 1246.0s
+2025-07-27 13:00:02,383 - INFO - Merge 6550/31743: 'lded' (freq=59475) - 321.5s elapsed, ETA 1236.4s
+2025-07-27 13:00:03,537 - INFO - Merge 6600/31743: 'anh' (freq=58219) - 322.6s elapsed, ETA 1229.0s
+2025-07-27 13:00:04,196 - INFO - Merge 6650/31743: ' Kl' (freq=57290) - 323.3s elapsed, ETA 1219.8s
+2025-07-27 13:00:04,965 - INFO - Merge 6700/31743: 'MD' (freq=56392) - 324.0s elapsed, ETA 1211.2s
+2025-07-27 13:00:05,680 - INFO - Merge 6750/31743: 'inge' (freq=55580) - 324.8s elapsed, ETA 1202.5s
+2025-07-27 13:00:06,349 - INFO - Merge 6800/31743: ' CA' (freq=54706) - 325.4s elapsed, ETA 1193.7s
+2025-07-27 13:00:07,199 - INFO - Merge 6850/31743: 'agl' (freq=53676) - 326.3s elapsed, ETA 1185.7s
+2025-07-27 13:00:07,921 - INFO - Merge 6900/31743: 'acer' (freq=52811) - 327.0s elapsed, ETA 1177.3s
+2025-07-27 13:00:08,707 - INFO - Merge 6950/31743: 'plod' (freq=51835) - 327.8s elapsed, ETA 1169.3s
+2025-07-27 13:00:09,337 - INFO - Merge 7000/31743: 'icop' (freq=51026) - 328.4s elapsed, ETA 1160.9s
+2025-07-27 13:00:09,877 - INFO - Merge 7050/31743: 'iog' (freq=50222) - 329.0s elapsed, ETA 1152.2s
+2025-07-27 13:00:10,392 - INFO - Merge 7100/31743: 'enro' (freq=49523) - 329.5s elapsed, ETA 1143.5s
+2025-07-27 13:00:11,024 - INFO - Merge 7150/31743: ' Had' (freq=48718) - 330.1s elapsed, ETA 1135.4s
+2025-07-27 13:00:11,584 - INFO - Merge 7200/31743: 'recy' (freq=47948) - 330.7s elapsed, ETA 1127.1s
+2025-07-27 13:00:12,289 - INFO - Merge 7250/31743: 'Wal' (freq=47149) - 331.4s elapsed, ETA 1119.5s
+2025-07-27 13:00:13,085 - INFO - Merge 7300/31743: 'TER' (freq=46306) - 332.2s elapsed, ETA 1112.2s
+2025-07-27 13:00:13,764 - INFO - Merge 7350/31743: ' Fit' (freq=45560) - 332.8s elapsed, ETA 1104.6s
+2025-07-27 13:00:14,344 - INFO - Merge 7400/31743: 'arse' (freq=44875) - 333.4s elapsed, ETA 1096.8s
+2025-07-27 13:00:15,056 - INFO - Merge 7450/31743: ' lux' (freq=44120) - 334.1s elapsed, ETA 1089.5s
+2025-07-27 13:00:15,892 - INFO - Merge 7500/31743: 'kee' (freq=43391) - 335.0s elapsed, ETA 1082.8s
+2025-07-27 13:00:16,405 - INFO - Merge 7550/31743: 'Ric' (freq=42724) - 335.5s elapsed, ETA 1075.0s
+2025-07-27 13:00:17,095 - INFO - Merge 7600/31743: ' Sud' (freq=42049) - 336.2s elapsed, ETA 1067.9s
+2025-07-27 13:00:17,677 - INFO - Merge 7650/31743: ' Inn' (freq=41403) - 336.8s elapsed, ETA 1060.6s
+2025-07-27 13:00:18,249 - INFO - Merge 7700/31743: 'lave' (freq=40709) - 337.3s elapsed, ETA 1053.3s
+2025-07-27 13:00:18,880 - INFO - Merge 7750/31743: ' jih' (freq=40076) - 338.0s elapsed, ETA 1046.3s
+2025-07-27 13:00:19,538 - INFO - Merge 7800/31743: 'shir' (freq=39487) - 338.6s elapsed, ETA 1039.4s
+2025-07-27 13:00:20,194 - INFO - Merge 7850/31743: 'ntro' (freq=38889) - 339.3s elapsed, ETA 1032.6s
+2025-07-27 13:00:20,859 - INFO - Merge 7900/31743: 'bul' (freq=38382) - 339.9s elapsed, ETA 1026.0s
+2025-07-27 13:00:21,328 - INFO - Merge 7950/31743: 'nhe' (freq=37895) - 340.4s elapsed, ETA 1018.8s
+2025-07-27 13:00:22,041 - INFO - Merge 8000/31743: 'inau' (freq=37219) - 341.1s elapsed, ETA 1012.4s
+2025-07-27 13:00:22,494 - INFO - Merge 8050/31743: 'ilor' (freq=36746) - 341.6s elapsed, ETA 1005.3s
+2025-07-27 13:00:22,952 - INFO - Merge 8100/31743: 'bsur' (freq=36252) - 342.0s elapsed, ETA 998.3s
+2025-07-27 13:00:23,438 - INFO - Merge 8150/31743: ' Alp' (freq=35776) - 342.5s elapsed, ETA 991.5s
+2025-07-27 13:00:23,916 - INFO - Merge 8200/31743: 'uler' (freq=35272) - 343.0s elapsed, ETA 984.8s
+2025-07-27 13:00:24,496 - INFO - Merge 8250/31743: 'anam' (freq=34826) - 343.6s elapsed, ETA 978.4s
+2025-07-27 13:00:25,090 - INFO - Merge 8300/31743: 'hton' (freq=34238) - 344.2s elapsed, ETA 972.1s
+2025-07-27 13:00:25,509 - INFO - Merge 8350/31743: 'upl' (freq=33843) - 344.6s elapsed, ETA 965.4s
+2025-07-27 13:00:25,998 - INFO - Merge 8400/31743: 'icar' (freq=33372) - 345.1s elapsed, ETA 958.9s
+2025-07-27 13:00:26,400 - INFO - Merge 8450/31743: ' gho' (freq=32998) - 345.5s elapsed, ETA 952.3s
+2025-07-27 13:00:26,763 - INFO - Merge 8500/31743: ' DVD' (freq=32662) - 345.8s elapsed, ETA 945.7s
+2025-07-27 13:00:27,325 - INFO - Merge 8550/31743: 'chic' (freq=32186) - 346.4s elapsed, ETA 939.7s
+2025-07-27 13:00:27,884 - INFO - Merge 8600/31743: 'avit' (freq=31664) - 347.0s elapsed, ETA 933.7s
+2025-07-27 13:00:28,300 - INFO - Merge 8650/31743: '967' (freq=31307) - 347.4s elapsed, ETA 927.4s
+2025-07-27 13:00:28,843 - INFO - Merge 8700/31743: 'anov' (freq=30899) - 347.9s elapsed, ETA 921.5s
+2025-07-27 13:00:29,310 - INFO - Merge 8750/31743: ' **' (freq=30549) - 348.4s elapsed, ETA 915.5s
+2025-07-27 13:00:29,824 - INFO - Merge 8800/31743: ' DJ' (freq=30183) - 348.9s elapsed, ETA 909.6s
+2025-07-27 13:00:30,322 - INFO - Merge 8850/31743: ' 188' (freq=29772) - 349.4s elapsed, ETA 903.8s
+2025-07-27 13:00:30,879 - INFO - Merge 8900/31743: 'ccu' (freq=29339) - 350.0s elapsed, ETA 898.2s
+2025-07-27 13:00:31,342 - INFO - Merge 8950/31743: 'Dar' (freq=28968) - 350.4s elapsed, ETA 892.4s
+2025-07-27 13:00:31,737 - INFO - Merge 9000/31743: 'anie' (freq=28634) - 350.8s elapsed, ETA 886.5s
+2025-07-27 13:00:32,251 - INFO - Merge 9050/31743: 'yses' (freq=28281) - 351.3s elapsed, ETA 881.0s
+2025-07-27 13:00:32,740 - INFO - Merge 9100/31743: 'iox' (freq=27903) - 351.8s elapsed, ETA 875.4s
+2025-07-27 13:00:33,266 - INFO - Merge 9150/31743: 'impa' (freq=27507) - 352.3s elapsed, ETA 870.0s
+2025-07-27 13:00:33,836 - INFO - Merge 9200/31743: 'lson' (freq=27109) - 352.9s elapsed, ETA 864.8s
+2025-07-27 13:00:34,259 - INFO - Merge 9250/31743: 'pio' (freq=26813) - 353.3s elapsed, ETA 859.2s
+2025-07-27 13:00:34,788 - INFO - Merge 9300/31743: 'igot' (freq=26380) - 353.9s elapsed, ETA 854.0s
+2025-07-27 13:00:35,059 - INFO - Merge 9350/31743: 'tid' (freq=26167) - 354.1s elapsed, ETA 848.1s
+2025-07-27 13:00:38,372 - INFO - Merge 9400/31743: ' Hem' (freq=25871) - 357.4s elapsed, ETA 849.6s
+2025-07-27 13:00:39,017 - INFO - Merge 9450/31743: ' mum' (freq=25502) - 358.1s elapsed, ETA 844.8s
+2025-07-27 13:00:39,486 - INFO - Merge 9500/31743: 'uscl' (freq=25188) - 358.6s elapsed, ETA 839.5s
+2025-07-27 13:00:40,035 - INFO - Merge 9550/31743: 'SR' (freq=24865) - 359.1s elapsed, ETA 834.5s
+2025-07-27 13:00:40,475 - INFO - Merge 9600/31743: ' MMA' (freq=24581) - 359.6s elapsed, ETA 829.3s
+2025-07-27 13:00:40,922 - INFO - Merge 9650/31743: 'Does' (freq=24327) - 360.0s elapsed, ETA 824.2s
+2025-07-27 13:00:41,299 - INFO - Merge 9700/31743: 'alke' (freq=24054) - 360.4s elapsed, ETA 818.9s
+2025-07-27 13:00:41,653 - INFO - Merge 9750/31743: ' HER' (freq=23797) - 360.7s elapsed, ETA 813.7s
+2025-07-27 13:00:42,144 - INFO - Merge 9800/31743: ' ere' (freq=23462) - 361.2s elapsed, ETA 808.8s
+2025-07-27 13:00:42,542 - INFO - Merge 9850/31743: ' piv' (freq=23213) - 361.6s elapsed, ETA 803.8s
+2025-07-27 13:00:43,021 - INFO - Merge 9900/31743: ' Nis' (freq=22936) - 362.1s elapsed, ETA 798.9s
+2025-07-27 13:00:43,388 - INFO - Merge 9950/31743: 'tuar' (freq=22674) - 362.5s elapsed, ETA 793.9s
+2025-07-27 13:00:43,840 - INFO - Merge 10000/31743: 'hry' (freq=22414) - 362.9s elapsed, ETA 789.1s
+2025-07-27 13:00:44,234 - INFO - Merge 10050/31743: ' Mol' (freq=22229) - 363.3s elapsed, ETA 784.2s
+2025-07-27 13:00:44,625 - INFO - Merge 10100/31743: 'Pan' (freq=21992) - 363.7s elapsed, ETA 779.4s
+2025-07-27 13:00:44,976 - INFO - Merge 10150/31743: ' Mix' (freq=21760) - 364.1s elapsed, ETA 774.5s
+2025-07-27 13:00:45,274 - INFO - Merge 10200/31743: 'hok' (freq=21588) - 364.4s elapsed, ETA 769.5s
+2025-07-27 13:00:45,688 - INFO - Merge 10250/31743: 'spot' (freq=21341) - 364.8s elapsed, ETA 764.9s
+2025-07-27 13:00:46,082 - INFO - Merge 10300/31743: ' Eat' (freq=21089) - 365.2s elapsed, ETA 760.2s
+2025-07-27 13:00:46,572 - INFO - Merge 10350/31743: 'plim' (freq=20819) - 365.7s elapsed, ETA 755.8s
+2025-07-27 13:00:46,947 - INFO - Merge 10400/31743: 'alik' (freq=20617) - 366.0s elapsed, ETA 751.2s
+2025-07-27 13:00:47,397 - INFO - Merge 10450/31743: 'oyag' (freq=20382) - 366.5s elapsed, ETA 746.7s
+2025-07-27 13:00:47,750 - INFO - Merge 10500/31743: ' SM' (freq=20186) - 366.8s elapsed, ETA 742.1s
+2025-07-27 13:00:48,227 - INFO - Merge 10550/31743: ' :)' (freq=19926) - 367.3s elapsed, ETA 737.8s
+2025-07-27 13:00:48,580 - INFO - Merge 10600/31743: 'heng' (freq=19755) - 367.7s elapsed, ETA 733.3s
+2025-07-27 13:00:49,025 - INFO - Merge 10650/31743: 'Lear' (freq=19519) - 368.1s elapsed, ETA 729.1s
+2025-07-27 13:00:49,357 - INFO - Merge 10700/31743: 'Cod' (freq=19346) - 368.4s elapsed, ETA 724.6s
+2025-07-27 13:00:49,699 - INFO - Merge 10750/31743: ' WE' (freq=19184) - 368.8s elapsed, ETA 720.2s
+2025-07-27 13:00:50,036 - INFO - Merge 10800/31743: ' Ax' (freq=19003) - 369.1s elapsed, ETA 715.8s
+2025-07-27 13:00:50,433 - INFO - Merge 10850/31743: 'OSE' (freq=18790) - 369.5s elapsed, ETA 711.5s
+2025-07-27 13:00:50,892 - INFO - Merge 10900/31743: 'arap' (freq=18578) - 370.0s elapsed, ETA 707.5s
+2025-07-27 13:00:51,353 - INFO - Merge 10950/31743: '125' (freq=18318) - 370.4s elapsed, ETA 703.4s
+2025-07-27 13:00:51,655 - INFO - Merge 11000/31743: 'Five' (freq=18163) - 370.7s elapsed, ETA 699.1s
+2025-07-27 13:00:52,100 - INFO - Merge 11050/31743: ' (-' (freq=17958) - 371.2s elapsed, ETA 695.1s
+2025-07-27 13:00:52,446 - INFO - Merge 11100/31743: 'usiv' (freq=17786) - 371.5s elapsed, ETA 690.9s
+2025-07-27 13:00:52,834 - INFO - Merge 11150/31743: ' Nok' (freq=17611) - 371.9s elapsed, ETA 686.9s
+2025-07-27 13:00:53,257 - INFO - Merge 11200/31743: 'tifu' (freq=17384) - 372.3s elapsed, ETA 682.9s
+2025-07-27 13:00:53,633 - INFO - Merge 11250/31743: 'irte' (freq=17235) - 372.7s elapsed, ETA 678.9s
+2025-07-27 13:00:54,026 - INFO - Merge 11300/31743: 'OI' (freq=17060) - 373.1s elapsed, ETA 675.0s
+2025-07-27 13:00:54,358 - INFO - Merge 11350/31743: ' Kom' (freq=16901) - 373.4s elapsed, ETA 671.0s
+2025-07-27 13:00:54,675 - INFO - Merge 11400/31743: 'esle' (freq=16742) - 373.8s elapsed, ETA 667.0s
+2025-07-27 13:00:55,039 - INFO - Merge 11450/31743: 'NO' (freq=16596) - 374.1s elapsed, ETA 663.1s
+2025-07-27 13:00:55,508 - INFO - Merge 11500/31743: 'orie' (freq=16429) - 374.6s elapsed, ETA 659.4s
+2025-07-27 13:00:55,907 - INFO - Merge 11550/31743: ' XL' (freq=16226) - 375.0s elapsed, ETA 655.6s
+2025-07-27 13:00:56,290 - INFO - Merge 11600/31743: 'llud' (freq=16075) - 375.4s elapsed, ETA 651.8s
+2025-07-27 13:00:56,644 - INFO - Merge 11650/31743: 'Know' (freq=15904) - 375.7s elapsed, ETA 648.0s
+2025-07-27 13:00:56,987 - INFO - Merge 11700/31743: ' Pep' (freq=15741) - 376.1s elapsed, ETA 644.2s
+2025-07-27 13:00:57,458 - INFO - Merge 11750/31743: 'ATH' (freq=15542) - 376.5s elapsed, ETA 640.7s
+2025-07-27 13:00:57,762 - INFO - Merge 11800/31743: ' Kun' (freq=15408) - 376.8s elapsed, ETA 636.9s
+2025-07-27 13:00:58,085 - INFO - Merge 11850/31743: 'Cla' (freq=15266) - 377.2s elapsed, ETA 633.2s
+2025-07-27 13:00:58,405 - INFO - Merge 11900/31743: 'arde' (freq=15132) - 377.5s elapsed, ETA 629.4s
+2025-07-27 13:00:58,807 - INFO - Merge 11950/31743: 'で' (freq=14995) - 377.9s elapsed, ETA 625.9s
+2025-07-27 13:00:59,159 - INFO - Merge 12000/31743: ' Lom' (freq=14837) - 378.2s elapsed, ETA 622.3s
+2025-07-27 13:00:59,572 - INFO - Merge 12050/31743: ' Jok' (freq=14678) - 378.7s elapsed, ETA 618.8s
+2025-07-27 13:00:59,991 - INFO - Merge 12100/31743: ' Fus' (freq=14533) - 379.1s elapsed, ETA 615.4s
+2025-07-27 13:01:00,378 - INFO - Merge 12150/31743: ' Pam' (freq=14394) - 379.5s elapsed, ETA 611.9s
+2025-07-27 13:01:00,765 - INFO - Merge 12200/31743: 'Arch' (freq=14232) - 379.8s elapsed, ETA 608.5s
+2025-07-27 13:01:01,037 - INFO - Merge 12250/31743: '��' (freq=14115) - 380.1s elapsed, ETA 604.9s
+2025-07-27 13:01:01,411 - INFO - Merge 12300/31743: ' aro' (freq=13953) - 380.5s elapsed, ETA 601.5s
+2025-07-27 13:01:01,843 - INFO - Merge 12350/31743: 'oC' (freq=13816) - 380.9s elapsed, ETA 598.2s
+2025-07-27 13:01:02,204 - INFO - Merge 12400/31743: 'hele' (freq=13663) - 381.3s elapsed, ETA 594.8s
+2025-07-27 13:01:02,594 - INFO - Merge 12450/31743: ' aur' (freq=13542) - 381.7s elapsed, ETA 591.5s
+2025-07-27 13:01:02,968 - INFO - Merge 12500/31743: ' 108' (freq=13411) - 382.0s elapsed, ETA 588.1s
+2025-07-27 13:01:03,312 - INFO - Merge 12550/31743: 'itne' (freq=13292) - 382.4s elapsed, ETA 584.8s
+2025-07-27 13:01:03,711 - INFO - Merge 12600/31743: 'clon' (freq=13159) - 382.8s elapsed, ETA 581.6s
+2025-07-27 13:01:04,027 - INFO - Merge 12650/31743: 'doff' (freq=13037) - 383.1s elapsed, ETA 578.2s
+2025-07-27 13:01:04,546 - INFO - Merge 12700/31743: 'anp' (freq=12869) - 383.6s elapsed, ETA 575.2s
+2025-07-27 13:01:04,881 - INFO - Merge 12750/31743: 'urle' (freq=12747) - 384.0s elapsed, ETA 572.0s
+2025-07-27 13:01:05,187 - INFO - Merge 12800/31743: 'Brad' (freq=12637) - 384.3s elapsed, ETA 568.7s
+2025-07-27 13:01:05,466 - INFO - Merge 12850/31743: ' wax' (freq=12551) - 384.5s elapsed, ETA 565.4s
+2025-07-27 13:01:05,906 - INFO - Merge 12900/31743: ' Moy' (freq=12404) - 385.0s elapsed, ETA 562.3s
+2025-07-27 13:01:06,257 - INFO - Merge 12950/31743: 'veaw' (freq=12305) - 385.3s elapsed, ETA 559.2s
+2025-07-27 13:01:06,600 - INFO - Merge 13000/31743: 'eev' (freq=12189) - 385.7s elapsed, ETA 556.1s
+2025-07-27 13:01:06,878 - INFO - Merge 13050/31743: 'Unl' (freq=12084) - 386.0s elapsed, ETA 552.8s
+2025-07-27 13:01:07,182 - INFO - Merge 13100/31743: 'atht' (freq=11978) - 386.3s elapsed, ETA 549.7s
+2025-07-27 13:01:07,415 - INFO - Merge 13150/31743: ' NW' (freq=11903) - 386.5s elapsed, ETA 546.5s
+2025-07-27 13:01:07,742 - INFO - Merge 13200/31743: 'TON' (freq=11813) - 386.8s elapsed, ETA 543.4s
+2025-07-27 13:01:08,076 - INFO - Merge 13250/31743: 'Left' (freq=11720) - 387.2s elapsed, ETA 540.4s
+2025-07-27 13:01:08,393 - INFO - Merge 13300/31743: 'baum' (freq=11618) - 387.5s elapsed, ETA 537.3s
+2025-07-27 13:01:08,710 - INFO - Merge 13350/31743: ' ted' (freq=11528) - 387.8s elapsed, ETA 534.3s
+2025-07-27 13:01:09,042 - INFO - Merge 13400/31743: 'OLIT' (freq=11418) - 388.1s elapsed, ETA 531.3s
+2025-07-27 13:01:09,347 - INFO - Merge 13450/31743: '��' (freq=11318) - 388.4s elapsed, ETA 528.3s
+2025-07-27 13:01:09,725 - INFO - Merge 13500/31743: 'uiz' (freq=11215) - 388.8s elapsed, ETA 525.4s
+2025-07-27 13:01:10,071 - INFO - Merge 13550/31743: 'unst' (freq=11123) - 389.1s elapsed, ETA 522.5s
+2025-07-27 13:01:10,356 - INFO - Merge 13600/31743: 'awns' (freq=11039) - 389.4s elapsed, ETA 519.5s
+2025-07-27 13:01:10,671 - INFO - Merge 13650/31743: 'REAT' (freq=10958) - 389.7s elapsed, ETA 516.6s
+2025-07-27 13:01:10,894 - INFO - Merge 13700/31743: ' CIT' (freq=10885) - 390.0s elapsed, ETA 513.6s
+2025-07-27 13:01:11,214 - INFO - Merge 13750/31743: 'Typ' (freq=10798) - 390.3s elapsed, ETA 510.7s
+2025-07-27 13:01:11,498 - INFO - Merge 13800/31743: 'akov' (freq=10706) - 390.6s elapsed, ETA 507.8s
+2025-07-27 13:01:11,787 - INFO - Merge 13850/31743: 'inav' (freq=10632) - 390.9s elapsed, ETA 505.0s
+2025-07-27 13:01:12,075 - INFO - Merge 13900/31743: 'ucid' (freq=10558) - 391.2s elapsed, ETA 502.1s
+2025-07-27 13:01:12,400 - INFO - Merge 13950/31743: 'jug' (freq=10471) - 391.5s elapsed, ETA 499.3s
+2025-07-27 13:01:12,751 - INFO - Merge 14000/31743: 'VEN' (freq=10388) - 391.8s elapsed, ETA 496.6s
+2025-07-27 13:01:13,025 - INFO - Merge 14050/31743: ' BA' (freq=10310) - 392.1s elapsed, ETA 493.8s
+2025-07-27 13:01:13,338 - INFO - Merge 14100/31743: ' ACT' (freq=10226) - 392.4s elapsed, ETA 491.0s
+2025-07-27 13:01:13,704 - INFO - Merge 14150/31743: 'yrr' (freq=10118) - 392.8s elapsed, ETA 488.4s
+2025-07-27 13:01:14,053 - INFO - Merge 14200/31743: 'Thursday' (freq=10036) - 393.1s elapsed, ETA 485.7s
+2025-07-27 13:01:14,342 - INFO - Merge 14250/31743: '230' (freq=9949) - 393.4s elapsed, ETA 483.0s
+2025-07-27 13:01:14,625 - INFO - Merge 14300/31743: 'fiab' (freq=9883) - 393.7s elapsed, ETA 480.2s
+2025-07-27 13:01:14,932 - INFO - Merge 14350/31743: 'leo' (freq=9806) - 394.0s elapsed, ETA 477.6s
+2025-07-27 13:01:15,291 - INFO - Merge 14400/31743: ' IGN' (freq=9707) - 394.4s elapsed, ETA 475.0s
+2025-07-27 13:01:15,621 - INFO - Merge 14450/31743: 'tues' (freq=9632) - 394.7s elapsed, ETA 472.4s
+2025-07-27 13:01:15,914 - INFO - Merge 14500/31743: '�' (freq=9567) - 395.0s elapsed, ETA 469.7s
+2025-07-27 13:01:16,276 - INFO - Merge 14550/31743: ' Nac' (freq=9470) - 395.4s elapsed, ETA 467.2s
+2025-07-27 13:01:16,578 - INFO - Merge 14600/31743: 'ayak' (freq=9390) - 395.7s elapsed, ETA 464.6s
+2025-07-27 13:01:16,994 - INFO - Merge 14650/31743: 'ebul' (freq=9300) - 396.1s elapsed, ETA 462.1s
+2025-07-27 13:01:17,242 - INFO - Merge 14700/31743: 'VG' (freq=9240) - 396.3s elapsed, ETA 459.5s
+2025-07-27 13:01:17,575 - INFO - Merge 14750/31743: 'soon' (freq=9149) - 396.7s elapsed, ETA 457.0s
+2025-07-27 13:01:17,816 - INFO - Merge 14800/31743: 'heny' (freq=9085) - 396.9s elapsed, ETA 454.4s
+2025-07-27 13:01:18,082 - INFO - Merge 14850/31743: '145' (freq=9017) - 397.2s elapsed, ETA 451.8s
+2025-07-27 13:01:18,356 - INFO - Merge 14900/31743: ' KN' (freq=8948) - 397.4s elapsed, ETA 449.3s
+2025-07-27 13:01:18,662 - INFO - Merge 14950/31743: ' jog' (freq=8891) - 397.7s elapsed, ETA 446.8s
+2025-07-27 13:01:18,923 - INFO - Merge 15000/31743: ' Vec' (freq=8833) - 398.0s elapsed, ETA 444.2s
+2025-07-27 13:01:19,184 - INFO - Merge 15050/31743: 'brus' (freq=8777) - 398.3s elapsed, ETA 441.7s
+2025-07-27 13:01:19,489 - INFO - Merge 15100/31743: '�' (freq=8704) - 398.6s elapsed, ETA 439.3s
+2025-07-27 13:01:19,875 - INFO - Merge 15150/31743: 'inr' (freq=8624) - 399.0s elapsed, ETA 437.0s
+2025-07-27 13:01:20,247 - INFO - Merge 15200/31743: 'на' (freq=8542) - 399.3s elapsed, ETA 434.6s
+2025-07-27 13:01:20,498 - INFO - Merge 15250/31743: ' alr' (freq=8485) - 399.6s elapsed, ETA 432.1s
+2025-07-27 13:01:20,813 - INFO - Merge 15300/31743: 'uld' (freq=8422) - 399.9s elapsed, ETA 429.8s
+2025-07-27 13:01:21,048 - INFO - Merge 15350/31743: 'astw' (freq=8368) - 400.1s elapsed, ETA 427.3s
+2025-07-27 13:01:21,353 - INFO - Merge 15400/31743: ' api' (freq=8299) - 400.4s elapsed, ETA 425.0s
+2025-07-27 13:01:21,651 - INFO - Merge 15450/31743: 'Mir' (freq=8240) - 400.7s elapsed, ETA 422.6s
+2025-07-27 13:01:21,888 - INFO - Merge 15500/31743: 'од' (freq=8185) - 401.0s elapsed, ETA 420.2s
+2025-07-27 13:01:22,129 - INFO - Merge 15550/31743: 'DIS' (freq=8129) - 401.2s elapsed, ETA 417.8s
+2025-07-27 13:01:22,398 - INFO - Merge 15600/31743: 'Cul' (freq=8071) - 401.5s elapsed, ETA 415.5s
+2025-07-27 13:01:22,644 - INFO - Merge 15650/31743: 'abc' (freq=8011) - 401.7s elapsed, ETA 413.1s
+2025-07-27 13:01:22,953 - INFO - Merge 15700/31743: 'adth' (freq=7945) - 402.0s elapsed, ETA 410.8s
+2025-07-27 13:01:23,216 - INFO - Merge 15750/31743: 'tbe' (freq=7891) - 402.3s elapsed, ETA 408.5s
+2025-07-27 13:01:23,503 - INFO - Merge 15800/31743: 'Ash' (freq=7840) - 402.6s elapsed, ETA 406.2s
+2025-07-27 13:01:23,804 - INFO - Merge 15850/31743: 'rj' (freq=7783) - 402.9s elapsed, ETA 404.0s
+2025-07-27 13:01:24,108 - INFO - Merge 15900/31743: 'evs' (freq=7725) - 403.2s elapsed, ETA 401.7s
+2025-07-27 13:01:24,346 - INFO - Merge 15950/31743: 'Emb' (freq=7676) - 403.4s elapsed, ETA 399.5s
+2025-07-27 13:01:24,593 - INFO - Merge 16000/31743: 'ça' (freq=7622) - 403.7s elapsed, ETA 397.2s
+2025-07-27 13:01:24,957 - INFO - Merge 16050/31743: 'alim' (freq=7550) - 404.0s elapsed, ETA 395.0s
+2025-07-27 13:01:25,270 - INFO - Merge 16100/31743: ' Sap' (freq=7493) - 404.3s elapsed, ETA 392.9s
+2025-07-27 13:01:25,570 - INFO - Merge 16150/31743: 'uyen' (freq=7441) - 404.6s elapsed, ETA 390.7s
+2025-07-27 13:01:25,851 - INFO - Merge 16200/31743: 'WN' (freq=7393) - 404.9s elapsed, ETA 388.5s
+2025-07-27 13:01:26,210 - INFO - Merge 16250/31743: 'bli' (freq=7325) - 405.3s elapsed, ETA 386.4s
+2025-07-27 13:01:26,498 - INFO - Merge 16300/31743: ' Vox' (freq=7265) - 405.6s elapsed, ETA 384.3s
+2025-07-27 13:01:26,801 - INFO - Merge 16350/31743: ' MyS' (freq=7208) - 405.9s elapsed, ETA 382.1s
+2025-07-27 13:01:27,073 - INFO - Merge 16400/31743: 'cCor' (freq=7157) - 406.2s elapsed, ETA 380.0s
+2025-07-27 13:01:27,326 - INFO - Merge 16450/31743: '\)' (freq=7111) - 406.4s elapsed, ETA 377.8s
+2025-07-27 13:01:27,659 - INFO - Merge 16500/31743: 'ин' (freq=7055) - 406.7s elapsed, ETA 375.8s
+2025-07-27 13:01:27,933 - INFO - Merge 16550/31743: 'doo' (freq=7006) - 407.0s elapsed, ETA 373.6s
+2025-07-27 13:01:28,174 - INFO - Merge 16600/31743: 'elh' (freq=6964) - 407.3s elapsed, ETA 371.5s
+2025-07-27 13:01:28,459 - INFO - Merge 16650/31743: ' Zap' (freq=6909) - 407.5s elapsed, ETA 369.4s
+2025-07-27 13:01:28,685 - INFO - Merge 16700/31743: 'imef' (freq=6870) - 407.8s elapsed, ETA 367.3s
+2025-07-27 13:01:28,927 - INFO - Merge 16750/31743: ' ??' (freq=6827) - 408.0s elapsed, ETA 365.2s
+2025-07-27 13:01:29,199 - INFO - Merge 16800/31743: 'zra' (freq=6781) - 408.3s elapsed, ETA 363.1s
+2025-07-27 13:01:29,458 - INFO - Merge 16850/31743: ' JFK' (freq=6731) - 408.5s elapsed, ETA 361.1s
+2025-07-27 13:01:29,730 - INFO - Merge 16900/31743: ' hut' (freq=6688) - 408.8s elapsed, ETA 359.0s
+2025-07-27 13:01:29,948 - INFO - Merge 16950/31743: ' Aby' (freq=6646) - 409.0s elapsed, ETA 357.0s
+2025-07-27 13:01:30,176 - INFO - Merge 17000/31743: 'hiff' (freq=6606) - 409.3s elapsed, ETA 354.9s
+2025-07-27 13:01:30,435 - INFO - Merge 17050/31743: 'ой' (freq=6558) - 409.5s elapsed, ETA 352.9s
+2025-07-27 13:01:30,714 - INFO - Merge 17100/31743: 'hech' (freq=6515) - 409.8s elapsed, ETA 350.9s
+2025-07-27 13:01:30,959 - INFO - Merge 17150/31743: 'OTA' (freq=6472) - 410.0s elapsed, ETA 348.9s
+2025-07-27 13:01:31,185 - INFO - Merge 17200/31743: 'stb' (freq=6436) - 410.3s elapsed, ETA 346.9s
+2025-07-27 13:01:31,443 - INFO - Merge 17250/31743: ' VW' (freq=6389) - 410.5s elapsed, ETA 344.9s
+2025-07-27 13:01:31,737 - INFO - Merge 17300/31743: 'Dub' (freq=6339) - 410.8s elapsed, ETA 343.0s
+2025-07-27 13:01:31,947 - INFO - Merge 17350/31743: 'Alas' (freq=6301) - 411.0s elapsed, ETA 341.0s
+2025-07-27 13:01:32,150 - INFO - Merge 17400/31743: 'exi' (freq=6267) - 411.2s elapsed, ETA 339.0s
+2025-07-27 13:01:32,448 - INFO - Merge 17450/31743: 'IEW' (freq=6218) - 411.5s elapsed, ETA 337.1s
+2025-07-27 13:01:32,692 - INFO - Merge 17500/31743: 'ebdo' (freq=6183) - 411.8s elapsed, ETA 335.1s
+2025-07-27 13:01:32,915 - INFO - Merge 17550/31743: 'sefu' (freq=6150) - 412.0s elapsed, ETA 333.2s
+2025-07-27 13:01:33,225 - INFO - Merge 17600/31743: 'npar' (freq=6097) - 412.3s elapsed, ETA 331.3s
+2025-07-27 13:01:33,431 - INFO - Merge 17650/31743: 'Weig' (freq=6067) - 412.5s elapsed, ETA 329.4s
+2025-07-27 13:01:33,680 - INFO - Merge 17700/31743: 'nbo' (freq=6026) - 412.8s elapsed, ETA 327.5s
+2025-07-27 13:01:33,893 - INFO - Merge 17750/31743: 'erB' (freq=5990) - 413.0s elapsed, ETA 325.6s
+2025-07-27 13:01:34,159 - INFO - Merge 17800/31743: ' MV' (freq=5946) - 413.2s elapsed, ETA 323.7s
+2025-07-27 13:01:34,408 - INFO - Merge 17850/31743: 'Miam' (freq=5911) - 413.5s elapsed, ETA 321.8s
+2025-07-27 13:01:34,715 - INFO - Merge 17900/31743: ' Jub' (freq=5860) - 413.8s elapsed, ETA 320.0s
+2025-07-27 13:01:34,925 - INFO - Merge 17950/31743: 'EDIT' (freq=5830) - 414.0s elapsed, ETA 318.1s
+2025-07-27 13:01:35,120 - INFO - Merge 18000/31743: 'tize' (freq=5799) - 414.2s elapsed, ETA 316.2s
+2025-07-27 13:01:35,363 - INFO - Merge 18050/31743: ' Kaf' (freq=5762) - 414.4s elapsed, ETA 314.4s
+2025-07-27 13:01:35,656 - INFO - Merge 18100/31743: 'Veg' (freq=5721) - 414.7s elapsed, ETA 312.6s
+2025-07-27 13:01:35,823 - INFO - Merge 18150/31743: ' gow' (freq=5696) - 414.9s elapsed, ETA 310.7s
+2025-07-27 13:01:35,993 - INFO - Merge 18200/31743: ' kh' (freq=5671) - 415.1s elapsed, ETA 308.9s
+2025-07-27 13:01:36,224 - INFO - Merge 18250/31743: 'ERR' (freq=5635) - 415.3s elapsed, ETA 307.1s
+2025-07-27 13:01:36,526 - INFO - Merge 18300/31743: 'Ey' (freq=5595) - 415.6s elapsed, ETA 305.3s
+2025-07-27 13:01:36,818 - INFO - Merge 18350/31743: 'olov' (freq=5556) - 415.9s elapsed, ETA 303.5s
+2025-07-27 13:01:37,079 - INFO - Merge 18400/31743: 'gog' (freq=5517) - 416.2s elapsed, ETA 301.8s
+2025-07-27 13:01:37,321 - INFO - Merge 18450/31743: 'etS' (freq=5485) - 416.4s elapsed, ETA 300.0s
+2025-07-27 13:01:37,534 - INFO - Merge 18500/31743: ' Erl' (freq=5455) - 416.6s elapsed, ETA 298.2s
+2025-07-27 13:01:37,747 - INFO - Merge 18550/31743: 'rful' (freq=5429) - 416.8s elapsed, ETA 296.5s
+2025-07-27 13:01:37,966 - INFO - Merge 18600/31743: 'roze' (freq=5396) - 417.0s elapsed, ETA 294.7s
+2025-07-27 13:01:38,183 - INFO - Merge 18650/31743: 'ekic' (freq=5364) - 417.3s elapsed, ETA 292.9s
+2025-07-27 13:01:38,371 - INFO - Merge 18700/31743: ' Arv' (freq=5337) - 417.4s elapsed, ETA 291.2s
+2025-07-27 13:01:38,578 - INFO - Merge 18750/31743: 'FN' (freq=5311) - 417.7s elapsed, ETA 289.4s
+2025-07-27 13:01:38,773 - INFO - Merge 18800/31743: 'ikar' (freq=5284) - 417.9s elapsed, ETA 287.7s
+2025-07-27 13:01:38,966 - INFO - Merge 18850/31743: 'ся' (freq=5258) - 418.0s elapsed, ETA 285.9s
+2025-07-27 13:01:39,164 - INFO - Merge 18900/31743: 'etyl' (freq=5231) - 418.2s elapsed, ETA 284.2s
+2025-07-27 13:01:39,405 - INFO - Merge 18950/31743: ' ESL' (freq=5199) - 418.5s elapsed, ETA 282.5s
+2025-07-27 13:01:39,662 - INFO - Merge 19000/31743: ' Pog' (freq=5166) - 418.7s elapsed, ETA 280.8s
+2025-07-27 13:01:39,919 - INFO - Merge 19050/31743: 'USB' (freq=5137) - 419.0s elapsed, ETA 279.2s
+2025-07-27 13:01:40,136 - INFO - Merge 19100/31743: 'piat' (freq=5112) - 419.2s elapsed, ETA 277.5s
+2025-07-27 13:01:40,361 - INFO - Merge 19150/31743: 'urom' (freq=5081) - 419.4s elapsed, ETA 275.8s
+2025-07-27 13:01:40,593 - INFO - Merge 19200/31743: 'ionaire' (freq=5055) - 419.7s elapsed, ETA 274.2s
+2025-07-27 13:01:40,800 - INFO - Merge 19250/31743: ' TOR' (freq=5028) - 419.9s elapsed, ETA 272.5s
+2025-07-27 13:01:41,017 - INFO - Merge 19300/31743: 'reic' (freq=5001) - 420.1s elapsed, ETA 270.8s
+2025-07-27 13:01:41,200 - INFO - Merge 19350/31743: '323' (freq=4978) - 420.3s elapsed, ETA 269.2s
+2025-07-27 13:01:41,492 - INFO - Merge 19400/31743: ' Yum' (freq=4945) - 420.6s elapsed, ETA 267.6s
+2025-07-27 13:01:41,695 - INFO - Merge 19450/31743: 'Lun' (freq=4917) - 420.8s elapsed, ETA 265.9s
+2025-07-27 13:01:41,936 - INFO - Merge 19500/31743: ' (%)' (freq=4884) - 421.0s elapsed, ETA 264.3s
+2025-07-27 13:01:42,187 - INFO - Merge 19550/31743: 'uft' (freq=4856) - 421.3s elapsed, ETA 262.7s
+2025-07-27 13:01:42,396 - INFO - Merge 19600/31743: 'ptr' (freq=4829) - 421.5s elapsed, ETA 261.1s
+2025-07-27 13:01:42,574 - INFO - Merge 19650/31743: 'WB' (freq=4806) - 421.7s elapsed, ETA 259.5s
+2025-07-27 13:01:42,833 - INFO - Merge 19700/31743: 'リ' (freq=4774) - 421.9s elapsed, ETA 257.9s
+2025-07-27 13:01:43,066 - INFO - Merge 19750/31743: 'Cris' (freq=4744) - 422.1s elapsed, ETA 256.3s
+2025-07-27 13:01:43,248 - INFO - Merge 19800/31743: 'abak' (freq=4720) - 422.3s elapsed, ETA 254.7s
+2025-07-27 13:01:43,451 - INFO - Merge 19850/31743: 'Ack' (freq=4697) - 422.5s elapsed, ETA 253.2s
+2025-07-27 13:01:43,626 - INFO - Merge 19900/31743: 'DAC' (freq=4676) - 422.7s elapsed, ETA 251.6s
+2025-07-27 13:01:43,821 - INFO - Merge 19950/31743: 'им' (freq=4655) - 422.9s elapsed, ETA 250.0s
+2025-07-27 13:01:44,022 - INFO - Merge 20000/31743: 'eSp' (freq=4630) - 423.1s elapsed, ETA 248.4s
+2025-07-27 13:01:44,171 - INFO - Merge 20050/31743: 'kcou' (freq=4611) - 423.2s elapsed, ETA 246.8s
+2025-07-27 13:01:44,406 - INFO - Merge 20100/31743: 'aaS' (freq=4587) - 423.5s elapsed, ETA 245.3s
+2025-07-27 13:01:44,632 - INFO - Merge 20150/31743: 'Club' (freq=4562) - 423.7s elapsed, ETA 243.8s
+2025-07-27 13:01:44,895 - INFO - Merge 20200/31743: 'ére' (freq=4533) - 424.0s elapsed, ETA 242.3s
+2025-07-27 13:01:45,140 - INFO - Merge 20250/31743: '887' (freq=4506) - 424.2s elapsed, ETA 240.8s
+2025-07-27 13:01:45,349 - INFO - Merge 20300/31743: '815' (freq=4484) - 424.4s elapsed, ETA 239.2s
+2025-07-27 13:01:45,616 - INFO - Merge 20350/31743: 'Stum' (freq=4452) - 424.7s elapsed, ETA 237.8s
+2025-07-27 13:01:45,806 - INFO - Merge 20400/31743: 'Gray' (freq=4428) - 424.9s elapsed, ETA 236.2s
+2025-07-27 13:01:45,987 - INFO - Merge 20450/31743: 'izzl' (freq=4410) - 425.1s elapsed, ETA 234.7s
+2025-07-27 13:01:46,244 - INFO - Merge 20500/31743: ' Xer' (freq=4382) - 425.3s elapsed, ETA 233.3s
+2025-07-27 13:01:46,456 - INFO - Merge 20550/31743: ' Ryu' (freq=4355) - 425.5s elapsed, ETA 231.8s
+2025-07-27 13:01:46,688 - INFO - Merge 20600/31743: ' MOV' (freq=4326) - 425.8s elapsed, ETA 230.3s
+2025-07-27 13:01:46,914 - INFO - Merge 20650/31743: 'об' (freq=4302) - 426.0s elapsed, ETA 228.8s
+2025-07-27 13:01:47,128 - INFO - Merge 20700/31743: ' TRE' (freq=4276) - 426.2s elapsed, ETA 227.4s
+2025-07-27 13:01:47,334 - INFO - Merge 20750/31743: 'ropl' (freq=4255) - 426.4s elapsed, ETA 225.9s
+2025-07-27 13:01:47,524 - INFO - Merge 20800/31743: ' MJ' (freq=4232) - 426.6s elapsed, ETA 224.4s
+2025-07-27 13:01:47,722 - INFO - Merge 20850/31743: 'avut' (freq=4211) - 426.8s elapsed, ETA 223.0s
+2025-07-27 13:01:47,975 - INFO - Merge 20900/31743: 'ixti' (freq=4185) - 427.1s elapsed, ETA 221.6s
+2025-07-27 13:01:48,224 - INFO - Merge 20950/31743: 'wrap' (freq=4163) - 427.3s elapsed, ETA 220.1s
+2025-07-27 13:01:48,414 - INFO - Merge 21000/31743: 'Eli' (freq=4144) - 427.5s elapsed, ETA 218.7s
+2025-07-27 13:01:48,635 - INFO - Merge 21050/31743: ' AMP' (freq=4121) - 427.7s elapsed, ETA 217.3s
+2025-07-27 13:01:48,819 - INFO - Merge 21100/31743: ' LNG' (freq=4102) - 427.9s elapsed, ETA 215.8s
+2025-07-27 13:01:48,995 - INFO - Merge 21150/31743: 'WER' (freq=4083) - 428.1s elapsed, ETA 214.4s
+2025-07-27 13:01:49,227 - INFO - Merge 21200/31743: 'UMB' (freq=4058) - 428.3s elapsed, ETA 213.0s
+2025-07-27 13:01:49,458 - INFO - Merge 21250/31743: 'reeh' (freq=4033) - 428.5s elapsed, ETA 211.6s
+2025-07-27 13:01:49,657 - INFO - Merge 21300/31743: '514' (freq=4012) - 428.7s elapsed, ETA 210.2s
+2025-07-27 13:01:49,868 - INFO - Merge 21350/31743: ' UBS' (freq=3990) - 428.9s elapsed, ETA 208.8s
+2025-07-27 13:01:50,066 - INFO - Merge 21400/31743: '["' (freq=3969) - 429.1s elapsed, ETA 207.4s
+2025-07-27 13:01:50,253 - INFO - Merge 21450/31743: '�' (freq=3952) - 429.3s elapsed, ETA 206.0s
+2025-07-27 13:01:50,422 - INFO - Merge 21500/31743: ' Hym' (freq=3933) - 429.5s elapsed, ETA 204.6s
+2025-07-27 13:01:50,616 - INFO - Merge 21550/31743: 'igfo' (freq=3913) - 429.7s elapsed, ETA 203.2s
+2025-07-27 13:01:50,820 - INFO - Merge 21600/31743: 'sluc' (freq=3893) - 429.9s elapsed, ETA 201.9s
+2025-07-27 13:01:51,022 - INFO - Merge 21650/31743: ' AE' (freq=3872) - 430.1s elapsed, ETA 200.5s
+2025-07-27 13:01:51,223 - INFO - Merge 21700/31743: ' unfet' (freq=3854) - 430.3s elapsed, ETA 199.1s
+2025-07-27 13:01:51,393 - INFO - Merge 21750/31743: 'ци' (freq=3836) - 430.5s elapsed, ETA 197.8s
+2025-07-27 13:01:51,591 - INFO - Merge 21800/31743: 'BUT' (freq=3817) - 430.7s elapsed, ETA 196.4s
+2025-07-27 13:01:51,787 - INFO - Merge 21850/31743: 'pois' (freq=3795) - 430.9s elapsed, ETA 195.1s
+2025-07-27 13:01:52,002 - INFO - Merge 21900/31743: '@#' (freq=3773) - 431.1s elapsed, ETA 193.7s
+2025-07-27 13:01:52,178 - INFO - Merge 21950/31743: '495' (freq=3753) - 431.3s elapsed, ETA 192.4s
+2025-07-27 13:01:52,427 - INFO - Merge 22000/31743: 'dhar' (freq=3732) - 431.5s elapsed, ETA 191.1s
+2025-07-27 13:01:52,607 - INFO - Merge 22050/31743: 'irai' (freq=3713) - 431.7s elapsed, ETA 189.8s
+2025-07-27 13:01:52,822 - INFO - Merge 22100/31743: 'wk' (freq=3690) - 431.9s elapsed, ETA 188.5s
+2025-07-27 13:01:53,055 - INFO - Merge 22150/31743: 'cCo' (freq=3666) - 432.1s elapsed, ETA 187.2s
+2025-07-27 13:01:53,240 - INFO - Merge 22200/31743: '699' (freq=3646) - 432.3s elapsed, ETA 185.8s
+2025-07-27 13:01:53,439 - INFO - Merge 22250/31743: 'AUST' (freq=3627) - 432.5s elapsed, ETA 184.5s
+2025-07-27 13:01:53,617 - INFO - Merge 22300/31743: 'ää' (freq=3610) - 432.7s elapsed, ETA 183.2s
+2025-07-27 13:01:53,764 - INFO - Merge 22350/31743: '346' (freq=3595) - 432.8s elapsed, ETA 181.9s
+2025-07-27 13:01:53,971 - INFO - Merge 22400/31743: 'ghur' (freq=3575) - 433.0s elapsed, ETA 180.6s
+2025-07-27 13:01:54,127 - INFO - Merge 22450/31743: ' ".' (freq=3560) - 433.2s elapsed, ETA 179.3s
+2025-07-27 13:01:54,336 - INFO - Merge 22500/31743: '/)' (freq=3542) - 433.4s elapsed, ETA 178.0s
+2025-07-27 13:01:54,539 - INFO - Merge 22550/31743: 'сс' (freq=3525) - 433.6s elapsed, ETA 176.8s
+2025-07-27 13:01:54,702 - INFO - Merge 22600/31743: ' UNL' (freq=3507) - 433.8s elapsed, ETA 175.5s
+2025-07-27 13:01:54,893 - INFO - Merge 22650/31743: 'alsk' (freq=3490) - 434.0s elapsed, ETA 174.2s
+2025-07-27 13:01:55,079 - INFO - Merge 22700/31743: '.#' (freq=3472) - 434.2s elapsed, ETA 173.0s
+2025-07-27 13:01:55,302 - INFO - Merge 22750/31743: ' Cud' (freq=3453) - 434.4s elapsed, ETA 171.7s
+2025-07-27 13:01:55,514 - INFO - Merge 22800/31743: 'ucet' (freq=3436) - 434.6s elapsed, ETA 170.5s
+2025-07-27 13:01:55,685 - INFO - Merge 22850/31743: 'ACKS' (freq=3420) - 434.8s elapsed, ETA 169.2s
+2025-07-27 13:01:55,872 - INFO - Merge 22900/31743: 'tifs' (freq=3402) - 435.0s elapsed, ETA 168.0s
+2025-07-27 13:01:56,037 - INFO - Merge 22950/31743: '618' (freq=3387) - 435.1s elapsed, ETA 166.7s
+2025-07-27 13:01:56,240 - INFO - Merge 23000/31743: ' Nid' (freq=3369) - 435.3s elapsed, ETA 165.5s
+2025-07-27 13:01:56,434 - INFO - Merge 23050/31743: 'dair' (freq=3352) - 435.5s elapsed, ETA 164.2s
+2025-07-27 13:01:56,601 - INFO - Merge 23100/31743: 'Nom' (freq=3338) - 435.7s elapsed, ETA 163.0s
+2025-07-27 13:01:56,721 - INFO - Merge 23150/31743: 'nnap' (freq=3326) - 435.8s elapsed, ETA 161.8s
+2025-07-27 13:01:56,897 - INFO - Merge 23200/31743: ' QA' (freq=3309) - 436.0s elapsed, ETA 160.5s
+2025-07-27 13:01:57,075 - INFO - Merge 23250/31743: ' FIP' (freq=3295) - 436.2s elapsed, ETA 159.3s
+2025-07-27 13:01:57,272 - INFO - Merge 23300/31743: ';"' (freq=3277) - 436.4s elapsed, ETA 158.1s
+2025-07-27 13:01:57,514 - INFO - Merge 23350/31743: 'psi' (freq=3257) - 436.6s elapsed, ETA 156.9s
+2025-07-27 13:01:57,648 - INFO - Merge 23400/31743: 'sepp' (freq=3245) - 436.7s elapsed, ETA 155.7s
+2025-07-27 13:01:57,810 - INFO - Merge 23450/31743: ' Yer' (freq=3230) - 436.9s elapsed, ETA 154.5s
+2025-07-27 13:01:57,987 - INFO - Merge 23500/31743: 'ofsk' (freq=3217) - 437.1s elapsed, ETA 153.3s
+2025-07-27 13:01:58,259 - INFO - Merge 23550/31743: '379' (freq=3198) - 437.3s elapsed, ETA 152.1s
+2025-07-27 13:01:58,502 - INFO - Merge 23600/31743: 'OCR' (freq=3179) - 437.6s elapsed, ETA 151.0s
+2025-07-27 13:01:58,669 - INFO - Merge 23650/31743: 'apf' (freq=3167) - 437.7s elapsed, ETA 149.8s
+2025-07-27 13:01:58,861 - INFO - Merge 23700/31743: ' 266' (freq=3149) - 437.9s elapsed, ETA 148.6s
+2025-07-27 13:01:59,072 - INFO - Merge 23750/31743: 'amay' (freq=3132) - 438.2s elapsed, ETA 147.5s
+2025-07-27 13:01:59,266 - INFO - Merge 23800/31743: 'Asp' (freq=3116) - 438.3s elapsed, ETA 146.3s
+2025-07-27 13:01:59,426 - INFO - Merge 23850/31743: 'sni' (freq=3104) - 438.5s elapsed, ETA 145.1s
+2025-07-27 13:01:59,588 - INFO - Merge 23900/31743: '〓' (freq=3090) - 438.7s elapsed, ETA 144.0s
+2025-07-27 13:01:59,764 - INFO - Merge 23950/31743: 'capp' (freq=3075) - 438.8s elapsed, ETA 142.8s
+2025-07-27 13:01:59,956 - INFO - Merge 24000/31743: '�' (freq=3063) - 439.0s elapsed, ETA 141.6s
+2025-07-27 13:02:00,170 - INFO - Merge 24050/31743: 'fff' (freq=3045) - 439.2s elapsed, ETA 140.5s
+2025-07-27 13:02:00,345 - INFO - Merge 24100/31743: '522' (freq=3031) - 439.4s elapsed, ETA 139.4s
+2025-07-27 13:02:00,499 - INFO - Merge 24150/31743: 'INO' (freq=3018) - 439.6s elapsed, ETA 138.2s
+2025-07-27 13:02:00,697 - INFO - Merge 24200/31743: 'orme' (freq=3005) - 439.8s elapsed, ETA 137.1s
+2025-07-27 13:02:00,873 - INFO - Merge 24250/31743: 'Odd' (freq=2989) - 440.0s elapsed, ETA 135.9s
+2025-07-27 13:02:01,024 - INFO - Merge 24300/31743: 'anez' (freq=2976) - 440.1s elapsed, ETA 134.8s
+2025-07-27 13:02:01,186 - INFO - Merge 24350/31743: 'BAM' (freq=2962) - 440.3s elapsed, ETA 133.7s
+2025-07-27 13:02:01,376 - INFO - Merge 24400/31743: 'shra' (freq=2947) - 440.5s elapsed, ETA 132.6s
+2025-07-27 13:02:01,571 - INFO - Merge 24450/31743: ' 960' (freq=2931) - 440.6s elapsed, ETA 131.4s
+2025-07-27 13:02:01,692 - INFO - Merge 24500/31743: 'ayup' (freq=2921) - 440.8s elapsed, ETA 130.3s
+2025-07-27 13:02:01,869 - INFO - Merge 24550/31743: ' eax' (freq=2905) - 440.9s elapsed, ETA 129.2s
+2025-07-27 13:02:02,013 - INFO - Merge 24600/31743: ' Osp' (freq=2894) - 441.1s elapsed, ETA 128.1s
+2025-07-27 13:02:02,190 - INFO - Merge 24650/31743: 'obat' (freq=2880) - 441.3s elapsed, ETA 127.0s
+2025-07-27 13:02:02,367 - INFO - Merge 24700/31743: '737' (freq=2867) - 441.4s elapsed, ETA 125.9s
+2025-07-27 13:02:02,556 - INFO - Merge 24750/31743: 'evO' (freq=2854) - 441.6s elapsed, ETA 124.8s
+2025-07-27 13:02:02,762 - INFO - Merge 24800/31743: 'selb' (freq=2838) - 441.8s elapsed, ETA 123.7s
+2025-07-27 13:02:02,936 - INFO - Merge 24850/31743: '�.�' (freq=2825) - 442.0s elapsed, ETA 122.6s
+2025-07-27 13:02:03,091 - INFO - Merge 24900/31743: ' 323' (freq=2811) - 442.2s elapsed, ETA 121.5s
+2025-07-27 13:02:03,268 - INFO - Merge 24950/31743: 'ewee' (freq=2798) - 442.3s elapsed, ETA 120.4s
+2025-07-27 13:02:03,398 - INFO - Merge 25000/31743: 'amza' (freq=2788) - 442.5s elapsed, ETA 119.3s
+2025-07-27 13:02:03,553 - INFO - Merge 25050/31743: 'IVES' (freq=2774) - 442.6s elapsed, ETA 118.3s
+2025-07-27 13:02:03,747 - INFO - Merge 25100/31743: 'inM' (freq=2759) - 442.8s elapsed, ETA 117.2s
+2025-07-27 13:02:03,978 - INFO - Merge 25150/31743: 'Dell' (freq=2740) - 443.1s elapsed, ETA 116.1s
+2025-07-27 13:02:04,141 - INFO - Merge 25200/31743: ' 530' (freq=2726) - 443.2s elapsed, ETA 115.1s
+2025-07-27 13:02:04,267 - INFO - Merge 25250/31743: '596' (freq=2718) - 443.3s elapsed, ETA 114.0s
+2025-07-27 13:02:04,378 - INFO - Merge 25300/31743: 'psin' (freq=2709) - 443.5s elapsed, ETA 112.9s
+2025-07-27 13:02:04,555 - INFO - Merge 25350/31743: 'zr' (freq=2695) - 443.6s elapsed, ETA 111.9s
+2025-07-27 13:02:04,688 - INFO - Merge 25400/31743: 'äl' (freq=2684) - 443.8s elapsed, ETA 110.8s
+2025-07-27 13:02:04,833 - INFO - Merge 25450/31743: '0111' (freq=2672) - 443.9s elapsed, ETA 109.8s
+2025-07-27 13:02:05,047 - INFO - Merge 25500/31743: ' hrs' (freq=2660) - 444.1s elapsed, ETA 108.7s
+2025-07-27 13:02:05,232 - INFO - Merge 25550/31743: '619' (freq=2649) - 444.3s elapsed, ETA 107.7s
+2025-07-27 13:02:05,401 - INFO - Merge 25600/31743: ' Yuc' (freq=2637) - 444.5s elapsed, ETA 106.7s
+2025-07-27 13:02:05,565 - INFO - Merge 25650/31743: 'GIS' (freq=2625) - 444.6s elapsed, ETA 105.6s
+2025-07-27 13:02:05,753 - INFO - Merge 25700/31743: 'êt' (freq=2613) - 444.8s elapsed, ETA 104.6s
+2025-07-27 13:02:05,944 - INFO - Merge 25750/31743: 'Diet' (freq=2599) - 445.0s elapsed, ETA 103.6s
+2025-07-27 13:02:06,090 - INFO - Merge 25800/31743: 'reO' (freq=2588) - 445.2s elapsed, ETA 102.5s
+2025-07-27 13:02:06,253 - INFO - Merge 25850/31743: ' Erw' (freq=2576) - 445.3s elapsed, ETA 101.5s
+2025-07-27 13:02:06,434 - INFO - Merge 25900/31743: 'Ace' (freq=2563) - 445.5s elapsed, ETA 100.5s
+2025-07-27 13:02:06,596 - INFO - Merge 25950/31743: ' añ' (freq=2551) - 445.7s elapsed, ETA 99.5s
+2025-07-27 13:02:06,762 - INFO - Merge 26000/31743: 'aH' (freq=2540) - 445.8s elapsed, ETA 98.5s
+2025-07-27 13:02:06,890 - INFO - Merge 26050/31743: ' STD' (freq=2530) - 446.0s elapsed, ETA 97.5s
+2025-07-27 13:02:07,018 - INFO - Merge 26100/31743: 'araf' (freq=2521) - 446.1s elapsed, ETA 96.4s
+2025-07-27 13:02:07,198 - INFO - Merge 26150/31743: 'erX' (freq=2508) - 446.3s elapsed, ETA 95.5s
+2025-07-27 13:02:07,356 - INFO - Merge 26200/31743: 'Gul' (freq=2497) - 446.4s elapsed, ETA 94.4s
+2025-07-27 13:02:07,531 - INFO - Merge 26250/31743: 'ż' (freq=2485) - 446.6s elapsed, ETA 93.5s
+2025-07-27 13:02:07,662 - INFO - Merge 26300/31743: 'idam' (freq=2474) - 446.7s elapsed, ETA 92.5s
+2025-07-27 13:02:07,818 - INFO - Merge 26350/31743: 'ofst' (freq=2464) - 446.9s elapsed, ETA 91.5s
+2025-07-27 13:02:07,964 - INFO - Merge 26400/31743: 'Wra' (freq=2453) - 447.0s elapsed, ETA 90.5s
+2025-07-27 13:02:08,112 - INFO - Merge 26450/31743: 'eure' (freq=2443) - 447.2s elapsed, ETA 89.5s
+2025-07-27 13:02:08,264 - INFO - Merge 26500/31743: ' Evg' (freq=2432) - 447.3s elapsed, ETA 88.5s
+2025-07-27 13:02:08,408 - INFO - Merge 26550/31743: 'Hair' (freq=2422) - 447.5s elapsed, ETA 87.5s
+2025-07-27 13:02:08,567 - INFO - Merge 26600/31743: 'eraz' (freq=2410) - 447.6s elapsed, ETA 86.6s
+2025-07-27 13:02:08,673 - INFO - Merge 26650/31743: 'Dh' (freq=2403) - 447.8s elapsed, ETA 85.6s
+2025-07-27 13:02:08,808 - INFO - Merge 26700/31743: 'twr' (freq=2393) - 447.9s elapsed, ETA 84.6s
+2025-07-27 13:02:08,942 - INFO - Merge 26750/31743: 'azqu' (freq=2383) - 448.0s elapsed, ETA 83.6s
+2025-07-27 13:02:09,106 - INFO - Merge 26800/31743: 'ZIN' (freq=2371) - 448.2s elapsed, ETA 82.7s
+2025-07-27 13:02:09,260 - INFO - Merge 26850/31743: 'gluc' (freq=2361) - 448.3s elapsed, ETA 81.7s
+2025-07-27 13:02:09,386 - INFO - Merge 26900/31743: 'hue' (freq=2351) - 448.5s elapsed, ETA 80.7s
+2025-07-27 13:02:09,495 - INFO - Merge 26950/31743: 'llre' (freq=2343) - 448.6s elapsed, ETA 79.8s
+2025-07-27 13:02:09,645 - INFO - Merge 27000/31743: 'abag' (freq=2333) - 448.7s elapsed, ETA 78.8s
+2025-07-27 13:02:09,791 - INFO - Merge 27050/31743: 'ncut' (freq=2324) - 448.9s elapsed, ETA 77.9s
+2025-07-27 13:02:09,948 - INFO - Merge 27100/31743: 'MPs' (freq=2313) - 449.0s elapsed, ETA 76.9s
+2025-07-27 13:02:10,111 - INFO - Merge 27150/31743: ' WL' (freq=2302) - 449.2s elapsed, ETA 76.0s
+2025-07-27 13:02:10,244 - INFO - Merge 27200/31743: '▒' (freq=2294) - 449.3s elapsed, ETA 75.0s
+2025-07-27 13:02:10,389 - INFO - Merge 27250/31743: 'AGES' (freq=2283) - 449.5s elapsed, ETA 74.1s
+2025-07-27 13:02:10,518 - INFO - Merge 27300/31743: ' Zad' (freq=2273) - 449.6s elapsed, ETA 73.2s
+2025-07-27 13:02:10,688 - INFO - Merge 27350/31743: 'arP' (freq=2262) - 449.8s elapsed, ETA 72.2s
+2025-07-27 13:02:10,842 - INFO - Merge 27400/31743: ' �' (freq=2251) - 449.9s elapsed, ETA 71.3s
+2025-07-27 13:02:10,958 - INFO - Merge 27450/31743: 'whom' (freq=2244) - 450.0s elapsed, ETA 70.4s
+2025-07-27 13:02:11,071 - INFO - Merge 27500/31743: 'imC' (freq=2236) - 450.1s elapsed, ETA 69.5s
+2025-07-27 13:02:11,214 - INFO - Merge 27550/31743: 'amai' (freq=2226) - 450.3s elapsed, ETA 68.5s
+2025-07-27 13:02:11,334 - INFO - Merge 27600/31743: 'mim' (freq=2219) - 450.4s elapsed, ETA 67.6s
+2025-07-27 13:02:11,464 - INFO - Merge 27650/31743: 'hyse' (freq=2210) - 450.5s elapsed, ETA 66.7s
+2025-07-27 13:02:11,624 - INFO - Merge 27700/31743: 'ALES' (freq=2199) - 450.7s elapsed, ETA 65.8s
+2025-07-27 13:02:11,754 - INFO - Merge 27750/31743: 'Gain' (freq=2191) - 450.8s elapsed, ETA 64.9s
+2025-07-27 13:02:11,882 - INFO - Merge 27800/31743: 'steb' (freq=2182) - 451.0s elapsed, ETA 64.0s
+2025-07-27 13:02:12,005 - INFO - Merge 27850/31743: ' ny' (freq=2173) - 451.1s elapsed, ETA 63.1s
+2025-07-27 13:02:12,134 - INFO - Merge 27900/31743: ' avg' (freq=2164) - 451.2s elapsed, ETA 62.2s
+2025-07-27 13:02:12,289 - INFO - Merge 27950/31743: '�,' (freq=2154) - 451.4s elapsed, ETA 61.3s
+2025-07-27 13:02:12,435 - INFO - Merge 28000/31743: ' ao' (freq=2144) - 451.5s elapsed, ETA 60.4s
+2025-07-27 13:02:12,551 - INFO - Merge 28050/31743: '�з' (freq=2137) - 451.6s elapsed, ETA 59.5s
+2025-07-27 13:02:12,647 - INFO - Merge 28100/31743: 'rjee' (freq=2130) - 451.7s elapsed, ETA 58.6s
+2025-07-27 13:02:12,767 - INFO - Merge 28150/31743: ' Bem' (freq=2121) - 451.8s elapsed, ETA 57.7s
+2025-07-27 13:02:12,903 - INFO - Merge 28200/31743: 'hka' (freq=2114) - 452.0s elapsed, ETA 56.8s
+2025-07-27 13:02:13,027 - INFO - Merge 28250/31743: 'nP' (freq=2106) - 452.1s elapsed, ETA 55.9s
+2025-07-27 13:02:13,151 - INFO - Merge 28300/31743: 'GHT' (freq=2098) - 452.2s elapsed, ETA 55.0s
+2025-07-27 13:02:13,279 - INFO - Merge 28350/31743: 'meer' (freq=2090) - 452.4s elapsed, ETA 54.1s
+2025-07-27 13:02:13,432 - INFO - Merge 28400/31743: 'naer' (freq=2082) - 452.5s elapsed, ETA 53.3s
+2025-07-27 13:02:13,570 - INFO - Merge 28450/31743: '�' (freq=2075) - 452.6s elapsed, ETA 52.4s
+2025-07-27 13:02:13,703 - INFO - Merge 28500/31743: ' Cuy' (freq=2065) - 452.8s elapsed, ETA 51.5s
+2025-07-27 13:02:13,818 - INFO - Merge 28550/31743: 'zaz' (freq=2058) - 452.9s elapsed, ETA 50.7s
+2025-07-27 13:02:13,967 - INFO - Merge 28600/31743: 'ldC' (freq=2048) - 453.0s elapsed, ETA 49.8s
+2025-07-27 13:02:14,095 - INFO - Merge 28650/31743: '051' (freq=2039) - 453.2s elapsed, ETA 48.9s
+2025-07-27 13:02:14,223 - INFO - Merge 28700/31743: '542' (freq=2032) - 453.3s elapsed, ETA 48.1s
+2025-07-27 13:02:14,351 - INFO - Merge 28750/31743: 'jig' (freq=2024) - 453.4s elapsed, ETA 47.2s
+2025-07-27 13:02:14,528 - INFO - Merge 28800/31743: 'aiju' (freq=2013) - 453.6s elapsed, ETA 46.4s
+2025-07-27 13:02:14,669 - INFO - Merge 28850/31743: 'hhat' (freq=2004) - 453.7s elapsed, ETA 45.5s
+2025-07-27 13:02:14,794 - INFO - Merge 28900/31743: 'Abad' (freq=1996) - 453.9s elapsed, ETA 44.6s
+2025-07-27 13:02:14,890 - INFO - Merge 28950/31743: 'quem' (freq=1990) - 454.0s elapsed, ETA 43.8s
+2025-07-27 13:02:14,995 - INFO - Merge 29000/31743: 'Peer' (freq=1983) - 454.1s elapsed, ETA 42.9s
+2025-07-27 13:02:15,091 - INFO - Merge 29050/31743: 'ygen' (freq=1978) - 454.2s elapsed, ETA 42.1s
+2025-07-27 13:02:15,207 - INFO - Merge 29100/31743: '��' (freq=1971) - 454.3s elapsed, ETA 41.3s
+2025-07-27 13:02:15,306 - INFO - Merge 29150/31743: ' MSC' (freq=1964) - 454.4s elapsed, ETA 40.4s
+2025-07-27 13:02:15,421 - INFO - Merge 29200/31743: ' DSA' (freq=1957) - 454.5s elapsed, ETA 39.6s
+2025-07-27 13:02:15,550 - INFO - Merge 29250/31743: 'hlen' (freq=1949) - 454.6s elapsed, ETA 38.7s
+2025-07-27 13:02:15,677 - INFO - Merge 29300/31743: 'ucie' (freq=1942) - 454.8s elapsed, ETA 37.9s
+2025-07-27 13:02:15,784 - INFO - Merge 29350/31743: ' Ego' (freq=1935) - 454.9s elapsed, ETA 37.1s
+2025-07-27 13:02:15,891 - INFO - Merge 29400/31743: ' Mox' (freq=1929) - 455.0s elapsed, ETA 36.3s
+2025-07-27 13:02:16,030 - INFO - Merge 29450/31743: 'ugul' (freq=1921) - 455.1s elapsed, ETA 35.4s
+2025-07-27 13:02:16,166 - INFO - Merge 29500/31743: 'Aris' (freq=1913) - 455.2s elapsed, ETA 34.6s
+2025-07-27 13:02:16,282 - INFO - Merge 29550/31743: 'osz' (freq=1906) - 455.4s elapsed, ETA 33.8s
+2025-07-27 13:02:16,413 - INFO - Merge 29600/31743: ' ' (freq=1899) - 455.5s elapsed, ETA 33.0s
+2025-07-27 13:02:16,587 - INFO - Merge 29650/31743: '566' (freq=1889) - 455.7s elapsed, ETA 32.2s
+2025-07-27 13:02:16,717 - INFO - Merge 29700/31743: ' Loz' (freq=1881) - 455.8s elapsed, ETA 31.4s
+2025-07-27 13:02:16,841 - INFO - Merge 29750/31743: ' NEA' (freq=1874) - 455.9s elapsed, ETA 30.5s
+2025-07-27 13:02:16,968 - INFO - Merge 29800/31743: '1300' (freq=1867) - 456.0s elapsed, ETA 29.7s
+2025-07-27 13:02:17,064 - INFO - Merge 29850/31743: 'tO' (freq=1862) - 456.1s elapsed, ETA 28.9s
+2025-07-27 13:02:17,218 - INFO - Merge 29900/31743: ' :))' (freq=1853) - 456.3s elapsed, ETA 28.1s
+2025-07-27 13:02:17,356 - INFO - Merge 29950/31743: 'Shay' (freq=1845) - 456.4s elapsed, ETA 27.3s
+2025-07-27 13:02:17,485 - INFO - Merge 30000/31743: 'drid' (freq=1838) - 456.6s elapsed, ETA 26.5s
+2025-07-27 13:02:17,606 - INFO - Merge 30050/31743: 'ZX' (freq=1831) - 456.7s elapsed, ETA 25.7s
+2025-07-27 13:02:17,734 - INFO - Merge 30100/31743: ' KIR' (freq=1824) - 456.8s elapsed, ETA 24.9s
+2025-07-27 13:02:17,846 - INFO - Merge 30150/31743: 'ltal' (freq=1819) - 456.9s elapsed, ETA 24.1s
+2025-07-27 13:02:17,957 - INFO - Merge 30200/31743: 'voo' (freq=1813) - 457.0s elapsed, ETA 23.4s
+2025-07-27 13:02:18,093 - INFO - Merge 30250/31743: 'ttan' (freq=1806) - 457.2s elapsed, ETA 22.6s
+2025-07-27 13:02:18,209 - INFO - Merge 30300/31743: 'enck' (freq=1800) - 457.3s elapsed, ETA 21.8s
+2025-07-27 13:02:18,352 - INFO - Merge 30350/31743: '||||' (freq=1793) - 457.4s elapsed, ETA 21.0s
+2025-07-27 13:02:18,437 - INFO - Merge 30400/31743: 'rixt' (freq=1788) - 457.5s elapsed, ETA 20.2s
+2025-07-27 13:02:18,576 - INFO - Merge 30450/31743: 'LIE' (freq=1780) - 457.7s elapsed, ETA 19.4s
+2025-07-27 13:02:18,700 - INFO - Merge 30500/31743: ' Chy' (freq=1773) - 457.8s elapsed, ETA 18.7s
+2025-07-27 13:02:18,836 - INFO - Merge 30550/31743: 'anS' (freq=1766) - 457.9s elapsed, ETA 17.9s
+2025-07-27 13:02:18,952 - INFO - Merge 30600/31743: 'estg' (freq=1760) - 458.0s elapsed, ETA 17.1s
+2025-07-27 13:02:19,109 - INFO - Merge 30650/31743: 'BIG' (freq=1751) - 458.2s elapsed, ETA 16.3s
+2025-07-27 13:02:19,247 - INFO - Merge 30700/31743: 'WIF' (freq=1743) - 458.3s elapsed, ETA 15.6s
+2025-07-27 13:02:19,395 - INFO - Merge 30750/31743: 'hesp' (freq=1735) - 458.5s elapsed, ETA 14.8s
+2025-07-27 13:02:19,529 - INFO - Merge 30800/31743: 'leid' (freq=1728) - 458.6s elapsed, ETA 14.0s
+2025-07-27 13:02:19,647 - INFO - Merge 30850/31743: 'hmar' (freq=1721) - 458.7s elapsed, ETA 13.3s
+2025-07-27 13:02:19,732 - INFO - Merge 30900/31743: 'ULAT' (freq=1716) - 458.8s elapsed, ETA 12.5s
+2025-07-27 13:02:19,858 - INFO - Merge 30950/31743: 'uain' (freq=1710) - 458.9s elapsed, ETA 11.8s
+2025-07-27 13:02:19,974 - INFO - Merge 31000/31743: ' Erm' (freq=1703) - 459.1s elapsed, ETA 11.0s
+2025-07-27 13:02:20,092 - INFO - Merge 31050/31743: 'ILAD' (freq=1697) - 459.2s elapsed, ETA 10.2s
+2025-07-27 13:02:20,210 - INFO - Merge 31100/31743: ' "@' (freq=1691) - 459.3s elapsed, ETA 9.5s
+2025-07-27 13:02:20,323 - INFO - Merge 31150/31743: 'atcl' (freq=1685) - 459.4s elapsed, ETA 8.7s
+2025-07-27 13:02:20,434 - INFO - Merge 31200/31743: ' CSF' (freq=1679) - 459.5s elapsed, ETA 8.0s
+2025-07-27 13:02:20,546 - INFO - Merge 31250/31743: 'oyis' (freq=1674) - 459.6s elapsed, ETA 7.3s
+2025-07-27 13:02:20,665 - INFO - Merge 31300/31743: ' Yaw' (freq=1667) - 459.7s elapsed, ETA 6.5s
+2025-07-27 13:02:20,782 - INFO - Merge 31350/31743: 'htfo' (freq=1661) - 459.9s elapsed, ETA 5.8s
+2025-07-27 13:02:20,912 - INFO - Merge 31400/31743: 'pav' (freq=1654) - 460.0s elapsed, ETA 5.0s
+2025-07-27 13:02:21,035 - INFO - Merge 31450/31743: 'NVID' (freq=1647) - 460.1s elapsed, ETA 4.3s
+2025-07-27 13:02:21,144 - INFO - Merge 31500/31743: 'abeu' (freq=1641) - 460.2s elapsed, ETA 3.6s
+2025-07-27 13:02:21,243 - INFO - Merge 31550/31743: ' WAV' (freq=1635) - 460.3s elapsed, ETA 2.8s
+2025-07-27 13:02:21,342 - INFO - Merge 31600/31743: 'SCO' (freq=1630) - 460.4s elapsed, ETA 2.1s
+2025-07-27 13:02:21,444 - INFO - Merge 31650/31743: ' CPD' (freq=1624) - 460.5s elapsed, ETA 1.4s
+2025-07-27 13:02:21,543 - INFO - Merge 31700/31743: 'Boat' (freq=1619) - 460.6s elapsed, ETA 0.6s
+2025-07-27 13:02:21,647 - INFO - BPE training completed in 495.04s
+2025-07-27 13:02:21,647 - INFO - Final vocab size: 32000, Merges performed: 31743
+2025-07-27 13:02:21,647 - INFO - Total training time: 814.28s
+Training completed!
+Vocab size: 32000
+Merges: 31743
+
+Saving tokenizer files...
+2025-07-27 13:02:25,980 - INFO - Saved tokenizer files:
+2025-07-27 13:02:25,980 - INFO -   Vocab: ./data/output/word_freq_tokenizer_vocab.bin
+2025-07-27 13:02:25,980 - INFO -   Merges: ./data/output/word_freq_tokenizer_merges.bin
+
+First 10 merges:
+1: ' ' + 't' -> ' t'
+2: ' ' + 'a' -> ' a'
+3: 'h' + 'e' -> 'he'
+4: 'i' + 'n' -> 'in'
+5: 'r' + 'e' -> 're'
+6: ' t' + 'he' -> ' the'
+7: 'o' + 'n' -> 'on'
+8: 'e' + 'r' -> 'er'
+9: ' ' + 's' -> ' s'
+10: ' ' + 'w' -> ' w'

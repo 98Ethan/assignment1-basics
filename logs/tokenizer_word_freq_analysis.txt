@@ -1,0 +1,30 @@
+================================================================================
+TOKENIZER WORD FREQUENCY PERFORMANCE ANALYSIS
+================================================================================
+
+1. TOP 20 FUNCTIONS BY CUMULATIVE TIME:
+--------------------------------------------------
+
+2. TOP 20 FUNCTIONS BY TOTAL TIME:
+--------------------------------------------------
+
+3. ANALYSIS OF MAIN COMPONENTS:
+--------------------------------------------------
+File reading and preprocessing:
+
+BPE training components:
+
+Heap operations:
+
+4. SUMMARY INSIGHTS:
+--------------------------------------------------
+
+Total execution time: 43.87 seconds
+
+Key function performance breakdown:
+  /Users/xinyu/Documents/Courses/cs336/assignment1-basics/cs336_basics/tokenizer_word_freq.py:95(build_word_frequencies): 41.63s (94.9%) - 1 calls
+  /Users/xinyu/Documents/Courses/cs336/assignment1-basics/cs336_basics/tokenizer_word_freq.py:215(apply_merge): 1.10s (2.5%) - 9743 calls
+  /Users/xinyu/Documents/Courses/cs336/assignment1-basics/cs336_basics/tokenizer_word_freq.py:187(get_most_frequent_pair): 0.81s (1.8%) - 9743 calls
+  ~:0(<built-in method _heapq.heappop>): 0.68s (1.6%) - 467720 calls
+  /Users/xinyu/Documents/Courses/cs336/assignment1-basics/cs336_basics/tokenizer_word_freq.py:163(initialize_splits_and_pairs): 0.31s (0.7%) - 1 calls
+  ~:0(<built-in method _heapq.heappush>): 0.08s (0.2%) - 541846 calls

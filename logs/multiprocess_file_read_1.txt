@@ -1,0 +1,147 @@
+File Handling Approach Comparison Test
+File: ./data/TinyStoriesV2-GPT4-train.txt
+File size: 2.07 GB
+Processes: 4
+Chunks: 16
+
+============================================================
+APPROACH 1: Main reads all, workers get full text + boundaries
+============================================================
+Main: Reading entire file...
+Main: File read in 6.34s
+Main: Memory usage: 17.3MB -> 3308.8MB (+3291.5MB)
+Main: Starting 4 workers for 16 chunks...
+Worker 0: Processing chunk 0:139178733
+Worker 1: Processing chunk 139178733:278356262
+Worker 2: Processing chunk 278356262:417533806
+Worker 3: Processing chunk 417533806:556711506
+Worker 0: Done in 30.74s - 23871 unique words
+Worker 1: Done in 21.68s - 24102 unique words
+Worker 2: Done in 21.02s - 24029 unique words
+Worker 3: Done in 16.62s - 23944 unique words
+Worker 4: Processing chunk 556711506:695889664
+Worker 4: Done in 15.44s - 23965 unique words
+Worker 5: Processing chunk 695889664:835067088
+Worker 6: Processing chunk 835067088:974244877
+Worker 7: Processing chunk 974244877:1113423257
+Worker 8: Processing chunk 1113423257:1252600463
+Worker 8: Done in 15.11s - 24035 unique words
+Worker 7: Done in 29.45s - 24014 unique words
+Worker 5: Done in 45.57s - 23865 unique words
+Worker 9: Processing chunk 1252600463:1391778431
+Worker 6: Done in 38.52s - 23983 unique words
+Worker 10: Processing chunk 1391778431:1530956502
+Worker 12: Processing chunk 1670134363:1809311791
+Worker 11: Processing chunk 1530956502:1670134363
+Worker 9: Done in 35.21s - 24033 unique words
+Worker 13: Processing chunk 1809311791:1948490127
+Worker 10: Done in 29.19s - 24073 unique words
+Worker 12: Done in 16.88s - 23920 unique words
+Worker 11: Done in 20.88s - 24063 unique words
+Worker 13: Done in 18.28s - 24089 unique words
+Worker 14: Processing chunk 1948490127:2087667678
+Worker 15: Processing chunk 2087667678:2226845268
+Worker 14: Done in 15.01s - 24055 unique words
+Worker 15: Done in 14.47s - 23849 unique words
+Results: 59922 unique words, 544752482 total
+Timing: Read=6.34s, Process=198.26s, Total=204.71s
+Memory: Peak=50.9MB
+
+============================================================
+APPROACH 2: Main reads and splits, workers get only their chunk
+============================================================
+Main: Reading and splitting file...
+Main: File read and split in 6.47s
+Main: Memory usage: 44.7MB -> 4266.0MB (+4221.2MB)
+Main: Starting 4 workers for 16 chunks...
+Worker 0: Processing chunk of 139178733 chars
+Worker 1: Processing chunk of 139177529 chars
+Worker 2: Processing chunk of 139177544 chars
+Worker 3: Processing chunk of 139177700 chars
+Worker 0: Done in 16.29s - 23871 unique words
+Worker 1: Done in 16.25s - 24102 unique words
+Worker 4: Processing chunk of 139178158 chars
+Worker 2: Done in 16.15s - 24029 unique words
+Worker 3: Done in 16.14s - 23944 unique words
+Worker 5: Processing chunk of 139177424 chars
+Worker 6: Processing chunk of 139177789 chars
+Worker 7: Processing chunk of 139178380 chars
+Worker 4: Done in 15.54s - 23965 unique words
+Worker 8: Processing chunk of 139177206 chars
+Worker 5: Done in 15.28s - 23865 unique words
+Worker 9: Processing chunk of 139177968 chars
+Worker 6: Done in 15.54s - 23983 unique words
+Worker 10: Processing chunk of 139178071 chars
+Worker 7: Done in 15.54s - 24014 unique words
+Worker 11: Processing chunk of 139177861 chars
+Worker 8: Done in 15.77s - 24035 unique words
+Worker 12: Processing chunk of 139177428 chars
+Worker 9: Done in 15.89s - 24033 unique words
+Worker 13: Processing chunk of 139178336 chars
+Worker 10: Done in 15.63s - 24073 unique words
+Worker 14: Processing chunk of 139177551 chars
+Worker 11: Done in 15.72s - 24063 unique words
+Worker 15: Processing chunk of 139177590 chars
+Worker 12: Done in 15.40s - 23920 unique words
+Worker 13: Done in 15.92s - 24089 unique words
+Worker 14: Done in 15.67s - 24055 unique words
+Worker 15: Done in 15.69s - 23849 unique words
+Results: 59922 unique words, 544752482 total
+Timing: Read=6.47s, Process=69.66s, Total=76.20s
+Memory: Peak=53.7MB
+
+============================================================
+APPROACH 3: Each worker reads file independently
+============================================================
+Main: Finding chunk boundaries...
+Main: Boundaries found in 0.00s
+Main: Memory usage: 48.4MB -> 48.5MB
+Main: Starting 4 workers for 16 chunks...
+Worker 0: Reading file chunk 0:139234745
+Worker 1: Reading file chunk 139234745:278469249
+Worker 2: Reading file chunk 278469249:417704387
+Worker 3: Reading file chunk 417704387:556938507
+Worker 2: Done in 14.10s - 24029 unique words
+Worker 1: Done in 14.11s - 24102 unique words
+Worker 3: Done in 14.12s - 23944 unique words
+Worker 0: Done in 14.13s - 23871 unique words
+Worker 4: Reading file chunk 556938507:696173730
+Worker 5: Reading file chunk 696173730:835407773
+Worker 6: Reading file chunk 835407773:974642339
+Worker 7: Reading file chunk 974642339:1113876594
+Worker 4: Done in 14.04s - 23965 unique words
+Worker 6: Done in 14.04s - 23983 unique words
+Worker 5: Done in 14.12s - 23865 unique words
+Worker 7: Done in 14.19s - 24014 unique words
+Worker 8: Reading file chunk 1113876594:1253112657
+Worker 9: Reading file chunk 1253112657:1392345974
+Worker 10: Reading file chunk 1392345974:1531581005
+Worker 11: Reading file chunk 1531581005:1670815354
+Worker 8: Done in 14.44s - 24035 unique words
+Worker 9: Done in 14.45s - 24032 unique words
+Worker 10: Done in 14.51s - 24073 unique words
+Worker 12: Reading file chunk 1670815354:1810050205
+Worker 13: Reading file chunk 1810050205:1949284164
+Worker 11: Done in 14.53s - 24063 unique words
+Worker 14: Reading file chunk 1949284164:2088518780
+Worker 15: Reading file chunk 2088518780:2227753162
+Worker 12: Done in 14.09s - 23920 unique words
+Worker 13: Done in 14.07s - 24089 unique words
+Worker 14: Done in 14.14s - 24055 unique words
+Worker 15: Done in 14.13s - 23849 unique words
+Results: 59921 unique words, 544752481 total
+Timing: Boundaries=0.00s, Process=58.08s, Total=58.14s
+Memory: Peak=74.2MB
+
+================================================================================
+SUMMARY COMPARISON
+================================================================================
+Approach                  Read(s)  Process(s) Total(s)  Memory(MB)  Words
+--------------------------------------------------------------------------------
+Full text to workers      6.34     198.26     204.71    50.9        59,922
+Pre-split chunks to workers 6.47     69.66      76.20     53.7        59,922
+Independent file reads    0.00     58.08      58.14     74.2        59,921
+
+Fastest overall: Independent file reads (58.14s)
+Fastest processing: Independent file reads (58.08s)
+Lowest memory: Full text to workers (50.9MB)
